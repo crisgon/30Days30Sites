@@ -1,0 +1,79 @@
+html,body{
+	font-family: 'Saira Semi Condensed', sans-serif;
+	color: #fff;
+	background-image: url('../images/skate.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+}
+
+body:before{
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: rgba(0,0,0,.4);
+}
+
+.title{
+	text-align: center;
+	font-size: 5em;
+	z-index: 1;
+}
+
+.subtitle{
+	text-align: center;
+	font-size: 2em;
+}
+
+.info{
+	width: 90%;
+	height: 70%;
+	margin: 0 auto;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+}
+
+.colum{
+	width: 48%;
+	height: 65%;
+	margin: 5% .5% 0;	
+	border: 2px solid #fff;
+	box-sizing: border-box;
+	padding: 1em;
+}
+
+.colum ul li{
+	font-size: 2em;
+	box-sizing: border-box;
+	padding: 1em;
+	text-align: center;
+}
+
+.colum form{
+	display: flex;
+	flex-direction: column;
+}
+
+.field{
+	width: 100%;
+	box-sizing: border-box;
+	padding: 1em;
+	margin: 1em 0;
+}
+
+.button{
+	background-color: #fff;
+	border: #fff;
+	box-sizing: border-box;
+	padding: 1em;
+}
+
+footer{
+	z-index: 1;
+	text-align: center;
+}
