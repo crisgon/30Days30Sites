@@ -1,0 +1,178 @@
+html, body{
+  font-family: 'Roboto Slab', serif;
+  background-color: #ebedef;
+  height: 100%;
+}
+
+h2{
+  font-size: 2em;
+  margin-bottom: .5em;
+  text-align: center;
+}
+
+.main-header{
+  width: 100%;
+  height: 100px;
+  background-color: #cb8d54;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.items-nav{
+  display: flex;
+  justify-content: center;
+}
+
+.items-nav a .item{
+  box-sizing: border-box;
+  padding: 5em;
+}
+
+.items-nav a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.items-nav .item:hover{
+  background-color: #fff;
+  color: #cb8d54;
+}
+
+.slides{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  height: 500px;
+  overflow: hidden;
+  transition: opacity 1s;
+  -webkit-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+}
+
+.slide p{
+  font-size: 1.5em;
+  position: absolute;
+  top: 60%;
+  width: 20%;
+  left: 40%;
+  text-align: center;
+  z-index: 9999;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 1em;
+}
+
+.showing{
+  opacity: 1;
+  z-index: 1;
+}
+
+.history{
+  box-sizing: border-box;
+  padding: 3em;
+  position: relative;
+  top: 500px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.history p{
+  width: 80%;
+  margin: 0 auto;
+  line-height: 2em;
+}
+.history img{
+  width: 10%;
+  padding: 1em;
+}
+
+.monuments{
+  position: relative;
+  color: #fff;
+  top: 500px;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  box-sizing: border-box;
+  background-color: #3a2c1f;
+}
+
+
+.monuments .list-items{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.list-items .item{
+  width: 24%;
+  height: 150px;
+  background-color: red;
+  overflow: hidden;
+  margin: .5%;
+}
+
+.list-items .item:hover{
+  opacity: 0.7;
+}
+
+.morePhotos{
+  width: 20%;
+  margin: 2em 40%;
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 1em;
+}
+
+.morePhotos:hover{
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+.team{
+  position: relative;
+  background-color: #fff;
+  top: 500px;
+  width: 100%;
+  height: 50%;
+  padding: 1em;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  line-height: 2em;
+}
+
+.team .colum1{
+  width: 15%;
+  position: relative;
+  top: 3em;
+}
+
+.team .colum2{
+  width: 84%;
+  box-sizing: border-box;
+  padding: 1em;
+  text-align: justify;
+}
+
+.footer{
+  position: relative;
+  top: 500px;
+  width: 100%;
+  height: 10%;
+  padding: 1em;
+  box-sizing: border-box;
+}

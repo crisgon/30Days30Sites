@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>City of Alagoinhas - The golden portico</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<header class="main-header">
+	<nav class="main-nav">
+		<ul class="items-nav">
+			<a href="#history"><li class="item">Our History</li></a>
+			<a href="#monuments"><li class="item">Monuments</li></a>
+			<a href="#team"><li class="item">Club Athletic of Alagoinhas</li></a>
+			<a href="https://www.alagoinhas.ba.gov.br" target="_blank"><li class="item">The city hall</li></a>
+		</ul>
+	</nav>
+</header>
+<section class="main-slide">
+	<ul class="slides">
+		<li class="slide ">
+			<img src="images/cityOfAlagoinhas.jpg" alt="City of Alagoinhas">
+			<p>City of Alagoinhas</p>
+		</li>
+		<li class="slide showing">
+			<img src="images/squareOfCoreto.jpg" alt="Square of Coreto">
+			<p>Square of Coreto</p>
+		</li>
+	</ul>
+</section>
+
+<section class="history" id="history">
+	<img src="images/papyrus.svg" alt="City of Alagoinhas">
+	<h2>Our history</h2>
+	<p>The history of Alagoinhas begins with the beginning of its settlement in the late eighteenth century, when a Portuguese priest founded a chapel in his territory and from there began the prosperous town due to the arrival of immigrants and the passage of the cattle road, access to the north and the Brazilian sertão, reason of the title given by Ruy Barbosa of "Golden Portico of the Sertão Baiano"
+
+As a village, Alagoinhas received several names, which were Freguesia da Água Fria, Parish of Santo Antônio das Lagoinhas and later Villa de Santo Antônio d'Alagoinhas. This latter name was the last as a village, which was later dismembered from the village of Inhambupe, to be emancipated as the Municipality of Alagoinhas.
+Around the church of St. Anthony several houses were built, so the village was elevated to the village, through Provincial Resolution 442 of June 16, 1852. Later, likewise, caused by the development of the village, which was generated and guided by the railway station, which was the center of economic activities, due to the great flow of people and goods, was raised to the municipality of Santo Antônio de Alagoinhas, being dismembered from the municipality of Inhambupe.
+According to IBGE, the district of Alagoinhas was created on October 15, 1816, belonging to Inhambupe until June 16, 1852, when it became a municipality. The political emancipation of Alagoinhas was officialized 153 years ago, on July 2, 1853, with the inauguration of the first City Hall and the president of the Council, Colonel José Joaquim Leal.
+<p>
+</section>
+<section class="monuments" id="monuments">
+	<h2>Monuments</h2>
+	<ul class="list-items">
+		<li class="item"><img src="images/churchyOfAlagoinhas.png" alt="Old churchy of Alagoinhas"></li>
+		<li class="item"><img src="images/stadiumOfCarneirao.jpg" alt="Stadium of carneirão"></li>
+		<li class="item"><img src="images/squareOfCoretoFull.jpg" alt="Square of coreto"></li>
+		<li class="item"><img src="images/churchyOfAlagoinhas.png" alt="Old churchy of Alagoinhas"></li>
+		<li class="item"><img src="images/stadiumOfCarneirao.jpg" alt="Stadium of carneirão"></li>
+		<li class="item"><img src="images/squareOfCoretoFull.jpg" alt="Square of coreto"></li>
+		<li class="item"><img src="images/churchyOfAlagoinhas.png" alt="Old churchy of Alagoinhas"></li>
+		<li class="item"><img src="images/stadiumOfCarneirao.jpg" alt="Stadium of carneirão"></li>
+		<li class="item"><img src="images/squareOfCoretoFull.jpg" alt="Square of coreto"></li>
+		<li class="item"><img src="images/churchyOfAlagoinhas.png" alt="Old churchy of Alagoinhas"></li>
+		<li class="item"><img src="images/stadiumOfCarneirao.jpg" alt="Stadium of carneirão"></li>
+		<li class="item"><img src="images/squareOfCoretoFull.jpg" alt="Square of coreto"></li>
+	</ul>
+	<button class="morePhotos">More Photos</button>
+</section>
+
+<section class="team" id="team">
+	<div class="colum colum1">
+		<img src="images/atletico.png" alt="Club Athletic of Alagoinhas">
+	</div>
+	<div class="colum colum2">
+		<h2>Club Athletic of Alagoinhas</h2>
+		<p>After analysis of the successive successes of the champions of amateur soccer in the city of Alagoinhas, which included Grêmio, Ferroviário, Agulha, Juventus, Botafogo and Gato Preto, and the participation of the Alagoinhense Team in the intermunicipal championships of selections, with inauguration of the Stadium Municipal Antônio de Figueiredo Carneiro (Estádio Antônio Carneiro - o Carneirão), the athletes of Alagoinhas, decided to found and register a club to dispute the Baiano Soccer Championship. As clubing was very large, it was consensus to found another club that was not already existing, the Alagoinhas Athletic Club, founded on April 2, 1970</p>
+	</div>
+</section>
+
+<footer class="footer">
+	Developed for Cristiano Gonçalves	
+</footer>
+<script src="https://use.fontawesome.com/3a8d059f5c.js"></script>
+
+<script>
+	var slides = document.querySelectorAll('.slide');
+	var currentSlide = 0;
+	setInterval(function(){
+		slides[currentSlide].className = 'slide';
+    currentSlide = (currentSlide+1)%slides.length;
+    slides[currentSlide].className = 'slide showing';
+	}, 5000);
+</script>
+</body>
+</html>
