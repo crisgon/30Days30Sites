@@ -1,0 +1,295 @@
+html, body{
+  font-family: 'Roboto Slab', serif;
+  background-color: #000;
+  height: 100%;
+}
+
+.title{
+  font-size: 2em;
+  margin-bottom: 1em;
+  text-align: center;
+  color: #fff;
+}
+
+.main-header{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  box-sizing: border-box;
+  padding: 2em;
+}
+
+.logo{
+  margin: 0 auto;
+}
+
+.logo h1{
+  background-color: #dcdcdc;
+  color: #000;
+  box-sizing: border-box;
+  padding: .5em;
+  text-align: center;
+}
+
+.nav-list{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; 
+  box-sizing: border-box;
+  padding: 1em;
+  text-align: center;
+}
+
+.nav-list .nav-item{
+  box-sizing: border-box;
+  padding: 1em;
+}
+
+
+.nav-item a{
+  color: #dcdcdc;
+  text-decoration: none;
+}
+
+.nav-item a:hover{
+  border-bottom: 2px  solid #dcdcdc;
+}
+
+.theGift{
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  line-height: 2em;
+  box-sizing: border-box;
+  padding-bottom: 2em;
+  overflow: hidden;
+}
+
+
+.box-plans{
+  width: 100%;
+  background-color: #d05045;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 1em;
+}
+
+
+.list-plans{
+  display: flex;
+  flex-direction: column;
+}
+
+.list-plans .plan{
+  width: 100%;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: .5em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.plan h2{
+  font-size: 1.5em;
+  box-sizing: border-box;
+  padding: .5em;
+}
+
+.plan .price-plan{
+  border: 1px dashed red;
+  color: #d05045;
+  align-self: flex-end;
+}
+.plan ul li{
+  box-sizing: border-box;
+  padding: .5em;
+}
+
+.register{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1em;
+  background-color: #d05045;
+  display: flex;
+  flex-direction: column;
+}
+
+.register label{
+  color: #fff;
+}
+
+.field{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1em;
+  margin: .5em 0;
+}
+
+.button{
+  box-sizing: border-box;
+  padding: 1em;
+  background-color: #fff;
+  border: none;
+}
+
+.footer{
+  text-align: center;
+  padding: 1.5em;
+  color: #fff;
+}
+
+.faq{
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.faq .colum{
+  width: 100%;
+  color: #fff;
+}
+
+.faq h2{
+  font-size: 1.2em;
+  color: #d05045;
+}
+
+.faq p{
+  box-sizing: border-box;
+  padding: 1em;
+}
+
+.giftOrder h2{
+  text-align: center;
+  font-size: 1.5em;
+  color: #fff;
+  box-sizing: border-box;
+  padding: 1em;
+}
+
+.contact-form{
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 1em;
+}
+
+.contact-form label{
+  color: #fff;
+  margin: 1em 0;
+}
+
+.contact-form textarea{
+  width: 99%;
+  margin: .5em 0;
+}
+
+.subtitle{
+  text-align: center;
+  color: #fff;
+  box-sizing: border-box;
+  padding: .5em;
+}
+
+@media(min-width: 768px){
+  .nav-list{
+    flex-direction: row; 
+  }
+
+  .logo{
+    width: 40%;
+  }
+  
+  .theGift p{
+    margin-bottom: 3em;
+  }
+
+  .list-gift{
+    width: 80%;
+    margin: 0 auto;
+    height: 300px; 
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .list-gift li{
+    width: 33.333%;
+  }
+
+  .list-gift img{
+    max-height: 100%;
+  }
+
+  .list-plans{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .plan{
+    width: 32%;  
+    margin: .5%;
+  }
+  
+  .faq{
+    flex-direction: row;
+  }
+
+  .faq .colum{
+    width: 49%;
+    margin: .5%;
+  }
+  
+  .list-gifts{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .giftOrder{
+    width: 32%;
+    margin: 0.5%;
+  }
+
+  .contact-form{
+    width: 50%;
+  }
+}
+
+@media(min-width: 1024px){
+  .list-gift{
+    flex-wrap: nowrap;
+  }
+
+  .register{
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .register h2{
+    width: 100%;
+  }
+
+  .register label{
+    width: 38%;
+    margin: 0 .5em;
+  }
+
+  .register .button{
+    width: 20%;
+    margin: 0 0 0 .5em;
+    position: relative;
+    top: .6em;
+  }
+
+  .faq{
+    width: 70%;
+  }
+}
