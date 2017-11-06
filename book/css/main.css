@@ -1,0 +1,138 @@
+html, body{
+  font-family: 'Slabo 27px', serif;
+  height: 100%;
+  background-color: #fefefe;
+}
+
+.header{
+  width: 100%;
+  height: 50%;
+  background-image: url('../images/masashi-kishimoto-capa.jpg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header:before{
+  content: '';
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0,0,0,.5);
+}
+
+.authorName{
+  position: relative;
+  font-size: 4em;
+  color: #fff;
+  text-align: center;
+}
+
+.title{
+  font-size: 2.5em;
+  box-sizing: border-box;
+  padding: 1em;
+  text-align: center;
+}
+.subtitle{
+  font-size: 3em;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.author{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1em;
+  text-align: center;
+  line-height: 1.7em;
+}
+
+.narutoManga{
+  text-align: center;
+}
+
+.listVol{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buy{
+  font-size: 2em;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+  padding: .2em;
+  background-color: #000;
+  position: relative;
+  top: .2em;
+}
+
+.reviews{
+  width: 100%;
+  background-image: url('../images/narutoTeam7.jpg');
+  background-attachment: fixed;
+  margin-top: 3em;
+}
+
+.listReviews{
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 1em;
+}
+
+.reviewItem{
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: .5em;
+  margin-bottom: 1em;
+  position: relative;
+  line-height: 1.7em;
+}
+
+.reviewItem:before{
+  content: '';
+  width: 3em;
+  height: 2em;
+  transform: rotate(30deg);
+  background-color: #fff ;
+  position: absolute;
+  bottom: -.5em;
+  right: 1em;
+}
+
+.authorReview{
+  font-weight: bolder;
+}
+
+.footer{
+  text-align: center;
+  box-sizing: border-box;
+  padding: 1em;
+  font-weight: bold;
+  background-color: #ffd901;
+}
+@media(min-width: 768px){
+  .listVol{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .vol{
+    width: 30%;
+    margin: 0 0 1em 2em;
+  }
+  .listReviews{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .reviewItem{
+    width: 48%;
+    margin: 1%;
+  }
+}
