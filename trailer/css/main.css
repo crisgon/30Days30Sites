@@ -1,0 +1,155 @@
+html, body{
+  font-family: 'Passion One', cursive;
+  height: 100%;
+  background-image: url('../images/moviePoster.jpg');
+  background-size: cover;
+  background-repeat: no-repeat; 
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container:before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0,0,0,.4);
+}
+
+.content{
+  z-index: 9999;
+}
+
+.mainInfo{
+  text-align: center;
+  color: #fff;
+}
+
+.title{
+  font-size: 2.5em;
+}
+
+.dates{
+  font-size: 1.5em;
+}
+
+
+.navigator{
+  position: absolute;
+  left: 0;
+  bottom: 1em;
+  width: 50%;
+  margin-left: 25%;
+  text-align: center;
+}
+
+.navigator ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;  
+}
+
+.navigator ul li{
+  box-sizing: border-box;
+  padding: .3em;
+  margin-bottom: .5em;
+}
+
+.navigator ul li a{
+  color: #fff;
+  font-size: 1.5em;
+}
+
+.close{
+  position: relative;
+  width: 20%;
+  margin-left: 80%;
+  font-size: 2em;
+  background-color: transparent;
+  border: none;
+  font-weight: bolder;
+}
+
+.trailer{
+  width: 80%;
+  position: absolute;
+  top: 35%;
+  margin-left: 10%;
+  z-index: 9999;
+}
+
+.trailer .close{
+  color: #fff;
+}
+
+.trailer iframe{
+  width: 100%;
+}
+
+.plot{
+  font-family: 'PT Sans', sans-serif;
+  box-sizing: border-box;
+  padding: 2em;
+  line-height: 1.5em;
+  text-align: justify;
+  width: 80%;
+  max-height: 100%;
+  margin-left: 10%;
+  position: absolute;
+  top: 1em;
+  z-index: 9999;
+  overflow: scroll;
+  background-color: #fff;
+}
+
+.plot h2{
+  font-size: 2em;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.hidden{
+  display: none;
+}
+
+@media(min-width: 768px){
+  .navigator ul{
+    flex-direction: row;
+  }
+  .close{
+    width: 10%;
+    margin-left: 90%;
+  }
+  .trailer{
+    top: 15%;
+  }
+
+  .trailer iframe{
+    min-height: 300px;
+  }
+}
+
+@media(min-width: 999px){
+  .trailer{
+    top: 15%;
+  }
+  .close{
+    width: 5%;
+    margin-left: 95%;
+  }
+  .trailer iframe{
+    min-height: 500px;
+  }
+
+  .plot{
+    overflow: hidden;
+    top: 30%;
+  }
+}
