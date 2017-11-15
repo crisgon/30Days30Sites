@@ -1,0 +1,315 @@
+html, body{
+  font-family: 'Barlow Condensed', sans-serif;
+  height: 100%;
+}
+
+.title{
+  text-align: center;
+  font-size: 2em;
+  box-sizing: border-box;
+  padding: 1em;
+}
+
+.container{
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+  padding: 1em;
+  margin-bottom: 1em;
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+.button{
+  background-color: transparent;
+  border: 2px solid #000;
+  box-sizing: border-box;
+  padding: 1em;
+  color: #000;
+  transition: all 1s ease;
+}
+
+.button:hover{
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+}
+
+/*-----------------HEADER----------------*/
+.header{
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/neymar-cover.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%);
+  display: flex;
+  flex-direction: column;
+}
+
+
+/*Nav*/
+.header-nav{
+  width: 100%;
+  position: fixed;
+  z-index: 9999;
+  background-color: #000;
+  border-bottom: 1px solid #fff;
+  box-sizing: border-box;
+  padding: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-nav .header-logo{
+  min-width: 3em;
+  width: 5%;
+}
+
+.header-nav .nav-button{
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 2em;
+}
+
+.header-nav .header-links{
+  width: 90%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: -90%; 
+  z-index: 999;
+  background-color: #000;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: right 2s ease;
+}
+
+.header-nav a{
+  color: #fff;
+  font-size: 1.3em;
+  position: relative;
+  border-bottom: .2em solid transparent;
+  box-sizing: border-box;
+  padding-bottom: .5em;
+}
+
+.header-nav a:before{
+  content: '';
+  width: 100%;
+  height: .05em;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+  transition: all .5s ease;
+}
+
+.header-nav a:hover:before{
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  -o-transform: scaleX(1);
+  transform: scaleX(1);
+}
+.hidden{
+  display: none;
+}
+
+#open-nav{
+  right: 0;
+}
+/*Phrase Header*/
+
+.header-title{
+  font-size: 3em;
+  text-align: center;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  color: #fff;
+  background-color: red;
+  box-sizing: border-box;
+  padding: .2em;
+}
+
+
+/*-------------------HISTORY----------------------*/
+
+.history{
+  text-align: center;
+}
+/*-----------------TIMELINE---------------*/
+.timeline{
+  position: relative;
+  z-index: -999;
+  margin: 0 auto;
+}
+
+.timeline:after{
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #000;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+
+
+.timeline-box{
+  width: 50%;
+  position: relative;
+  box-sizing: border-box;
+  padding: 1em;
+}
+
+.timeline-box img{
+  width: 40px;
+}
+
+.timeline-box:nth-child(odd):after{
+  content: '';
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border: 5px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 1em;
+  right: -.51em;
+  z-index: 999;
+}
+
+.timeline-box:nth-child(even):after{
+  content: '';
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border: 5px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 1em;
+  left: -.51em;
+  z-index: 999;
+}
+
+.left{
+  left: 0%;
+}
+
+.right{
+  left: 50%;
+}
+
+.timeline-content{
+  box-sizing: border-box;
+  padding: 1em;
+  background-color: #363636;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content-year{
+  background-color: black;
+  width: 100%;
+  box-sizing: border-box;
+  padding: .5em;
+  font-size: 1.5em;
+  color: #fff;
+}
+
+/*------------------------TITLES---------------------------*/
+.titles{
+  background-color: #000;
+  color: #fff;
+}
+
+.titles-list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-box{
+  width: 100%;
+  margin: .5em 0;
+  color: #000;
+  background-color: #fff;
+  text-align: center;
+}
+
+.title-box img{
+  width: 100px;
+}
+
+/*-----------------------INSTITUTE-------------------------*/
+.institute{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.institute iframe{
+  width: 100%;
+  height: 50vh;
+  margin-bottom: 2em;
+}
+
+/*----------------------FOOTER----------------------*/
+
+.footer{
+  text-align: center;
+  box-sizing: border-box;
+  padding: 1em;
+}
+
+/*---------------------MEDIA QUERIES--------------------*/
+@media(min-width: 768px){
+  .header-nav .header-links{
+    right: 0;
+    position: relative;
+    flex-direction: row;
+  }
+
+  .header-nav .nav-button{
+    display: none;
+  }
+
+  .header-title{
+    width: 50%;
+    left: 25%;
+  }
+
+  .timeline-content{
+    flex-direction: row;
+  }
+
+  .titles-list{
+    flex-direction: row;
+  }
+
+  .title-box{
+    width: 33%;
+    margin: 0 .5em;
+  }
+  .institute iframe{
+    height: 45vw;
+  }
+}
+
+
+
+
