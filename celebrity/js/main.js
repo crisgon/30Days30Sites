@@ -2,15 +2,19 @@
 	var nav = doc.querySelector('[data-js="nav-links"]');
 	var openNav  = doc.querySelector('[data-js="open-nav"]');
 	var closeNav = doc.querySelector('[data-js="close-nav"]');
+	
+	openNav.addEventListener('click', activeNav, false);
 
-	openNav.addEventListener('click', function(event){
+	closeNav.addEventListener('click', disableNav, false);
+
+	function activeNav(event){
 			event.preventDefault();
 			nav.setAttribute('id', 'open-nav');
-	}, false);
+	}
 
-	closeNav.addEventListener('click', function(event){
+	function disableNav(event){
 		event.preventDefault();
 		nav.removeAttribute('id');
-	}, false);
-	
+	}
+
 }(document, window));

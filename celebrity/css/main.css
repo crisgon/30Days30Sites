@@ -87,7 +87,7 @@ html, body{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  transition: right 2s ease;
+  transition: right .8s ease;
 }
 
 .header-nav a{
@@ -145,7 +145,7 @@ html, body{
 /*-------------------HISTORY----------------------*/
 
 .history{
-  text-align: center;
+  text-align: justify;
 }
 /*-----------------TIMELINE---------------*/
 .timeline{
@@ -169,8 +169,7 @@ html, body{
 .timeline-box{
   width: 50%;
   position: relative;
-  box-sizing: border-box;
-  padding: 1em;
+  text-align: center;
 }
 
 .timeline-box img{
@@ -255,6 +254,11 @@ html, body{
   width: 100px;
 }
 
+.title-box h2{
+  box-sizing: border-box;
+  padding: .8em;
+  font-weight: bold;
+}
 /*-----------------------INSTITUTE-------------------------*/
 .institute{
   display: flex;
@@ -300,7 +304,11 @@ html, body{
   .titles-list{
     flex-direction: row;
   }
-
+  
+  .timeline-box{
+    box-sizing: border-box;
+    padding: 1em;
+  }
   .title-box{
     width: 33%;
     margin: 0 .5em;
