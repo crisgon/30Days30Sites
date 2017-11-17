@@ -1,0 +1,130 @@
+html, body{
+  font-family: 'Bree Serif', serif;  
+  background-color: #272822;
+  height: 100%;
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.content{
+  width: 100%;
+  min-height: 100%;
+  position: absolute;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*overflow: hidden;*/
+}
+
+.content h1{
+  font-size: 5em;
+}
+
+.button{
+  width: 100%;
+  position: relative;
+  margin: 1em auto;
+  border: 3px solid #fff;
+  box-sizing: border-box;
+  padding: .5em;
+  font-size: 2em;
+  text-align: center;
+  transition: all .8s ease;
+}
+
+.button a{
+  color: #fff;
+}
+
+.button:hover{
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.button:hover a{
+  color: #000;
+}
+
+.benefits{
+  width: 100%;
+  height: 50%;
+  box-sizing: border-box;
+  padding-top: 4em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.benefit{
+  width: 200px;
+  height: 200px;
+  margin: .5em;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s ease;
+}
+
+.benefit span{
+  background-color: #fff;
+  color: #000;
+  box-sizing: border-box;
+  padding: 1em;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.benefit:nth-child(1){
+  background-image: url('../images/1.jpg');
+}
+
+.benefit:nth-child(2){
+  background-image: url('../images/2.jpg');
+}
+
+.benefit:nth-child(3){
+  background-image: url('../images/3.jpg');
+}
+
+.benefit:nth-child(4){
+  background-image: url('../images/4.jpg');
+}
+
+.benefit:hover{
+  filter: grayscale(100);
+  transform: scale(1.1);
+}
+
+.benefit:hover span{
+  opacity: 1;
+  cursor: pointer;
+}
+
+@media(min-width: 768px){
+  .content{
+    background-image: url('../images/spin.gif');
+    background-size: cover;
+    background-position: center;
+  }
+  .container:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+  }
+}
