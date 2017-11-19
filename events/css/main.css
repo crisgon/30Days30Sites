@@ -1,0 +1,300 @@
+/*----------------All Site----------------------*/
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+html, body{
+  font-family: 'Ubuntu', sans-serif;
+  height: 100%;
+  background-color: #212127;
+  color: #fff;
+}
+
+.title{
+  text-align: center;
+  font-size: 2em;
+  padding: 1em;
+}
+
+.button{
+  color: #fff;
+  background-image: linear-gradient(to right, #e74c3c, #f1c40f);
+  border: none;
+  transition: all 1s;
+  position: relative;
+  border-radius: 5px;
+}
+
+.button:before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: .2em;
+  width: 0;
+  background-color: #fff;
+  transition: width 1s;
+}
+
+
+.button:hover:before{
+  width: 100%;
+}
+/*-------------------------Banner------------------------------*/
+.main-event{
+  position: relative;
+}
+
+.main-event, .main-event .event{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap; 
+}
+
+.main-event .event{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.main-event .event-1{
+  opacity: 1;
+  transition: opacity .3s;
+  animation: fadeOut 5s infinite alternate;
+  animation-delay: 5s;
+}
+
+.main-event .event-2{
+  opacity: 0;
+  transition: opacity .3s;
+  animation: fadeIn 5s infinite alternate;
+  animation-delay: 5s;
+}
+
+
+.main-event .event-1 .event-photo{
+  background-image: url('../images/maroon5.jpg');
+}
+
+.main-event .event-2 .event-photo{
+  background-image: url('../images/rihanna.jpg');
+}
+
+.event-photo,
+.event-map{
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
+
+.event-photo{
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 2em;
+  z-index: 1;
+}
+
+.event-photo:before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.4);
+}
+
+.event-photo h1, h2{
+  color: #fff;
+  padding-bottom: .5em;
+  z-index: 1;
+}
+
+.event-photo h1{
+  font-size: 3.5em;
+}
+
+.event-photo h2{
+  font-size: 1.5em;
+}
+
+.event-photo .button{
+  padding: 1em;
+  color: #fff;
+  background-image: linear-gradient(to right, #e74c3c, #f1c40f);
+}
+
+.event-photo h1, 
+.event-photo .button{
+  z-index: 1;
+}
+
+.event-map{
+  position: relative;
+}
+
+.event-map iframe{
+  width: 100%;
+  height: 100%;
+}
+
+/*-----------------------Form Search---------------------------*/
+.search{
+  width: 100%;
+  padding: 1em;
+  font-size: 1.2em;
+}
+
+.search form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.search input, .search label  input{
+  padding: .5em;
+  margin: 1em 0;
+  height: 50px;
+}
+
+.search label{
+  display: flex;
+  flex-direction: column;
+}
+
+.search label input{
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: none;
+}
+
+/*-----------------------Event List---------------------------*/
+
+.all-events{
+  width: 100%;
+  padding: 1em;
+  display: flex;  
+  flex-wrap: wrap;
+}
+
+
+.all-events .box-event{
+  width: 100%;
+  height: 450px;
+  margin-bottom: 1em;
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.all-events .box-event .map iframe{
+  width: 100%;
+}
+
+.all-events .box-event .info{
+  padding: 1em;
+}
+
+.all-events .box-event .info h2{
+  color: #000;
+}
+
+.all-events .box-event .info .event-name{
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.info a{
+  font-size: 2em;
+  color: #f1c40f;
+}
+
+/*-------------------Coments Slide----------------*/
+.coments-container{
+  background-image: linear-gradient(to right, #e74c3c, #f1c40f);
+}
+
+.coments{
+  width: 100%;
+  min-height: 200px;
+  position: relative;
+}
+
+.coments input{
+  display: none;
+}
+
+.coment-item{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, #e74c3c, #f1c40f);
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
+
+.coment-item p{
+  line-height: 1.2em;
+  padding-bottom: .2em;
+  margin-top: -1.5em;
+}
+
+.coment-item cite{
+  font-size: 1.4em;
+  font-weight: bolder;
+  margin-top: 1em;
+}
+
+.controls{
+  color: #fff;
+  position: absolute;
+  bottom: 1em;
+  z-index: 9;
+  width: 100%;
+  padding: .5em;
+  text-align: center;
+}
+
+#item1:checked ~ .controls .item1,
+#item2:checked ~ .controls .item2,
+#item3:checked ~ .controls .item3{
+  color: #212127;
+}
+
+#item1:checked ~ #one,
+#item2:checked ~ #two,
+#item3:checked ~ #three{
+  z-index: 9;
+}
+
+.footer{
+  width: 100%;
+  height: 50px;
+  padding: 1em;
+  text-align: center;
+}
+
+/*--------------------Footer------------------*/
+
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut{
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
+  }
+}
