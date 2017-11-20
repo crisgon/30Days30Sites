@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css?family=Berkshire+Swash|Roboto");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+img {
+  max-width: 100%; }
+
+a {
+  text-decoration: none; }
+
+p {
+  line-height: 1.5em; }
+
+.container, .header, .navigato, .navigato a, .contact, .contact form, .footer, .footer .social {
+  display: flex; }
+
+html, body {
+  font-family: 'Roboto', sans-serif; }
+
+.container {
+  width: 100%; }
+
+.title {
+  font-family: 'Berkshire Swash', cursive;
+  text-align: center; }
+
+.button {
+  background-color: #fff;
+  border: none;
+  padding: 1em;
+  transition: background-color 1s; }
+
+.button:hover {
+  background-color: #553323;
+  color: #fff;
+  cursor: pointer; }
+
+/*---------------Header--------------------*/
+.header {
+  width: 100%;
+  height: 368px;
+  margin: 0 auto;
+  background-image: url("../images/site-cover.jpg");
+  background-attachment: fixed;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  position: relative; }
+
+.header:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.logo, .navigato {
+  z-index: 1; }
+
+.logo {
+  width: 250px;
+  height: 250px;
+  margin-top: 1em;
+  padding: 1em;
+  text-align: center; }
+
+.logo .title {
+  font-size: 2.5em;
+  color: #fff; }
+
+.logo img {
+  max-width: 80%; }
+
+/*---------------Header Nav--------------------*/
+.navigato {
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 3.2em;
+  background-color: #553323;
+  position: absolute;
+  bottom: 0; }
+
+.navigato a {
+  height: 100%;
+  align-items: center;
+  padding: .5em;
+  font-size: 1.4em;
+  color: #fff; }
+
+.navigato a:hover {
+  background-color: #875a48; }
+
+.navigato a span {
+  display: none; }
+
+/*---------------About Club--------------------*/
+.club {
+  padding: .5em; }
+
+.club .title {
+  font-size: 2em;
+  padding: 1em; }
+
+.club .container {
+  flex-direction: column; }
+
+.club .container .about p {
+  text-align: justify; }
+
+.club .members {
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap; }
+
+.club .members li {
+  margin-bottom: 2em; }
+
+.members h2 {
+  padding: 1em;
+  font-size: 1.3em; }
+
+.club .members i {
+  font-size: 1.5em; }
+
+.club .members i:hover {
+  color: #553323;
+  cursor: pointer; }
+
+.club .members img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; }
+
+/*---------------Map--------------------*/
+.map iframe {
+  width: 100%;
+  height: 300px; }
+
+/*---------------Contact Form--------------------*/
+.contact {
+  background-color: #875a48;
+  flex-direction: column;
+  color: #fff; }
+
+.contact .title {
+  text-align: center;
+  padding: 1em;
+  font-size: 2em; }
+
+.contact form {
+  padding: 1em;
+  flex-direction: column; }
+
+.contact form .field {
+  padding: 1em;
+  margin: .5em 0; }
+
+/*--------------------Footer-------------------*/
+.footer {
+  width: 100%;
+  height: 80px;
+  padding: 1em;
+  background-color: #553323;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-size: 1.3m; }
+
+.footer a {
+  color: #fff; }
+
+.footer .social li {
+  margin: 0 .2em; }
+
+/*--------------------Media Querie----------------------*/
+@media (min-width: 768px) {
+  .navigato a span {
+    display: block; }
+
+  .navigato a i {
+    margin-left: .3em; }
+
+  .club .container {
+    flex-direction: row;
+    justify-content: space-around; }
+
+  .club .room {
+    width: 35%; }
+
+  .club .about {
+    width: 60%; }
+
+  .club .members li {
+    width: 24%;
+    margin-bottom: 2em; }
+
+  .contact form {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative; }
+
+  .contact form .button {
+    width: 15%;
+    margin-left: 85%; } }
+
+/*# sourceMappingURL=main.css.map */
