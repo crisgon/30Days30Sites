@@ -1,0 +1,38 @@
+.main-header {
+  height: 50%;
+  background-image: url("../images/banner4.jpg");
+  background-position: bottom; }
+
+.contact {
+  padding-bottom: 2em; }
+  .contact .title {
+    padding: 4em 0 2em 0; }
+  .contact form {
+    width: 100%;
+    padding: .5em;
+    display: flex;
+    flex-direction: column; }
+    .contact form label {
+      margin: .5em 0; }
+    .contact form input, .contact form textarea {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 1em;
+      border: none;
+      margin: .5em 0; }
+    .contact form .button {
+      border: 2px solid #fec95b;
+      transition: background-color .3s, color .3s; }
+      .contact form .button:hover {
+        background-color: inherit;
+        color: #fec95b; }
+
+@media (min-width: 768px) {
+  .contact form {
+    width: 80%;
+    margin-left: 10%; }
+    .contact form .button {
+      width: 20%;
+      margin-left: 80%; } }
+
+/*# sourceMappingURL=contact.css.map */

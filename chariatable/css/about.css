@@ -1,0 +1,62 @@
+.main-header {
+  background-image: url("../images/about.jpg");
+  height: 50%; }
+
+.about .title {
+  padding: 2em 0; }
+
+.collaborators {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .collaborators li {
+    text-align: center;
+    margin: 0 0 2em 0; }
+    .collaborators li h2 {
+      font-size: 1.2em;
+      font-weight: bold;
+      padding: .5em; }
+    .collaborators li img {
+      border-radius: 50%; }
+    .collaborators li a {
+      color: #000;
+      font-size: 1.1em; }
+
+.join {
+  width: 100%;
+  padding: 2em;
+  background-color: #fec95b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; }
+  .join h2 {
+    font-size: 2em;
+    color: #fff;
+    padding: 1em 0; }
+  .join button {
+    width: 200px;
+    padding: 1em;
+    background-color: #fff;
+    border: 2px solid #fff;
+    color: #fec95b;
+    transition: background-color .3s, color .3s; }
+    .join button:hover {
+      background-color: inherit;
+      color: #fff;
+      cursor: pointer; }
+
+@media (min-width: 768px) {
+  .collaborators {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    .collaborators li {
+      width: 30%; } }
+@media (min-width: 1024px) {
+  .collaborators li {
+    width: 23%; } }
+
+/*# sourceMappingURL=about.css.map */

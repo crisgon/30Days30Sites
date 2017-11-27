@@ -1,0 +1,61 @@
+.main-header {
+  height: 50%;
+  background-image: url("../images/banner3.jpg");
+  background-position: bottom center; }
+
+.projects {
+  width: 100%;
+  padding: 2em .5em; }
+  .projects .title {
+    padding: 2em 0; }
+  .projects .list-projects {
+    width: 100%;
+    display: flex;
+    flex-direction: column; }
+    .projects .list-projects .proj {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      line-height: 2em; }
+      .projects .list-projects .proj h2 {
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: .5em; }
+      .projects .list-projects .proj .icon {
+        background-color: #fff;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1em 0; }
+        .projects .list-projects .proj .icon img {
+          width: 100%;
+          max-width: 100px; }
+
+@media (min-width: 768px) {
+  .projects .list-projects {
+    width: 80%;
+    margin-left: 10%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    .projects .list-projects .proj {
+      width: 45%; } }
+@media (min-width: 1024px) {
+  .projects .list-projects .proj {
+    width: 100%;
+    flex-direction: row; }
+    .projects .list-projects .proj .icon {
+      width: 25%; }
+    .projects .list-projects .proj .description {
+      text-align: left; }
+      .projects .list-projects .proj .description p {
+        padding: 1em;
+        text-align: justify; } }
+
+/*# sourceMappingURL=projects.css.map */

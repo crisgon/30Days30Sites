@@ -1,0 +1,83 @@
+.main-header{
+	height: 50%;
+	background-image: url('../images/banner3.jpg');
+	background-position: bottom center;
+}
+
+.projects{
+	width: 100%;
+	padding: 2em .5em;
+	.title{
+		padding: 2em 0;
+	}
+	.list-projects{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		.proj{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		line-height: 2em;
+		h2{
+			font-size: 1.5em;
+			font-weight: bold;
+			padding: .5em;
+		}
+		.icon{
+			background-color: #fff;
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 1em 0;
+			img{
+				width: 100%;
+				max-width: 100px;
+			}
+		}
+	}
+}
+}
+
+
+@media(min-width: 768px){
+	.projects{
+		.list-projects{
+			width: 80%;
+			margin-left: 10%;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			.proj{
+				width: 45%;
+			}
+		}
+	}
+}
+
+@media(min-width: 1024px){
+	.projects{
+		.list-projects{
+			.proj{
+				width: 100%;
+				flex-direction: row;
+				.icon{
+					width: 25%;
+				}
+				.description{
+					text-align: left;
+					p{
+						padding: 1em;
+						text-align: justify;
+					}
+				}
+			}
+		}
+	}
+}
