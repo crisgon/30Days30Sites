@@ -5,6 +5,7 @@ var openNav = document.querySelector('[data-js="open-nav"]');
 openNav.addEventListener('click', open);
 nav.querySelectorAll('a').forEach(function(item){
 	item.addEventListener('click', close);
+	console.log(this.item);
 });
 function open(){
 	nav.classList.add('open-nav');
@@ -19,6 +20,7 @@ var top = window.pageYOffset || document.documentElement.scrollTop;
 	if( top > 500 ) {
     console.log('Maior que 300');
     header.classList.add('header-small');
+
   }else{
     header.classList.remove('header-small');
   }

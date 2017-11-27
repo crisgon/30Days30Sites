@@ -78,7 +78,8 @@ html, body{
 .header-small{
 	position: fixed;
 	z-index: 9999;
-	min-height: 100px;
+	height: 50px;
+	animation: showNav 1s;
 	.logo{
 		width: 30%;
 	}
@@ -145,7 +146,7 @@ html, body{
 .products{
 	width: 80%;
 	margin-left: 10%;
-	padding: 2em 1em 0 1em ;
+	padding: 4em 1em;
 	display: flex;
 	flex-direction: column;
 	.title{
@@ -185,7 +186,7 @@ html, body{
 
 .comments{
 	width: 100%;
-	padding: 1em 0 3em 0;
+	padding: 4em 1em;
 	background-color: #151617;
 	.list-comments{
 		width: 80%;
@@ -233,7 +234,7 @@ html, body{
 	.title:after{background-color: #fff;}
 	.contact-form{
 		width: 100%;
-		padding: 1em;
+		padding: 4em 1em;
 		fieldset{
 			display: flex;
 			label{
@@ -401,5 +402,15 @@ html, body{
 				width: 30%;
 			}
 		}
+	}
+}
+
+
+@keyframes showNav{
+	0%{
+		transform: translateY(-100%);
+	}
+	100%{
+		transform: translateY(0%);
 	}
 }
