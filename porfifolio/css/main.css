@@ -1,0 +1,224 @@
+html, body{
+  font-family: 'Raleway', sans-serif;
+  background-color: #1d1f20;
+  height: 100%;
+}
+
+img{
+  max-width: 100%;  
+}
+
+.navigation{
+  width: 100%;
+  height: 5em;
+  position: fixed;
+  background-color: #4a4a4a;
+  background-image: linear-gradient(to right, #033864, #e6a43f) ;
+  color: #fff;
+  box-sizing: border-box;
+  padding: 1.5em;
+  z-index: 999;
+}
+
+.list-items{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.list-items h1{
+  font-family: 'Pacifico', cursive;
+  font-size: 1.4em;
+}
+
+.item a{
+  color: #fff;
+  text-decoration: none;
+  box-sizing: border-box;
+  padding: 1em;
+  border-radius: 2em;
+  border: .1em solid transparent;
+}
+
+.item a:hover{
+  border-color: #fff;
+}
+
+.whoIam{
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/universe.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.whoIam:after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0,0,0,.5);  
+}
+
+.container{
+  z-index: 1;
+  width: 80%;
+  margin: 0 auto;
+}
+
+figure{
+  text-align: center;
+}
+.me{
+  width: 200px;
+  border-radius: 50%;
+}
+
+.about{
+  box-sizing: border-box;
+  padding: 1em;
+  text-align: center;
+  line-height: 2em;
+  color: #fff;
+}
+
+.title{
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  color: #e2a23f;
+  box-sizing: border-box;
+  padding: .2em;
+}
+.subtitle{
+  text-align: center;
+  color: #fff;
+  padding: .2em;
+}
+
+.socialMedias{
+  text-align: center;
+}
+
+.socialMedias li{
+  display: inline;
+  font-size: 2.5em;
+  margin: .1em;
+}
+
+.socialMedias li a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.mySkills{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.skills{
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 3em;
+}
+
+.skills li{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  filter: grayscale(100%);
+}
+
+.level{
+  background-color: transparent;
+  border: 0.2em solid #fff;
+  border-radius: 2em;
+  margin-top: .5em;
+  padding: .8em;
+  color: #fff;
+}
+
+.otherSkills{
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+}
+
+.otherSkills li{
+  margin: .5em;
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 2em;
+}
+
+.whereAmIFrom{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding-top: 4em;
+}
+
+.map{
+  width: 60%;
+  height: 100%;
+}
+
+.theCity{
+  width: 40%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.theCity p{
+  padding: 1em;
+  color: #fff;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+.myJobs{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 6em;
+  background-image: url('../images/workspace.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.listJobs{
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.listJobs .job{
+  width: 23%;
+  height: 200px;
+  margin: .2em;
+  background-color: #000;
+  background-image: url('../images/thumb.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+footer{
+  text-align: center;
+  padding: 1em;
+  color: #fff;
+}
