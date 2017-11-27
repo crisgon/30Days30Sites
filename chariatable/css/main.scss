@@ -344,7 +344,8 @@ html, body{
 @media(min-width: 1024px){
 		.main-header{
 			.navigator{
-				.open-nav{
+				.open-nav,
+				.close-nav{
 					display: none;
 				}
 				ul{

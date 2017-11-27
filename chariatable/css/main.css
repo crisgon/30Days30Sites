@@ -321,7 +321,8 @@ html, body {
     .main-footer .container .social {
       width: 35%; } }
 @media (min-width: 1024px) {
-  .main-header .navigator .open-nav {
+  .main-header .navigator .open-nav,
+  .main-header .navigator .close-nav {
     display: none; }
   .main-header .navigator ul {
     width: 40%;
