@@ -21,7 +21,8 @@
       border-radius: 50%; }
     .collaborators li a {
       color: #000;
-      font-size: 1.1em; }
+      font-size: 2em;
+      margin: 0 .25em; }
 
 .join {
   width: 100%;
