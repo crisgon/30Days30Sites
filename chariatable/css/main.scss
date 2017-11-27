@@ -98,8 +98,9 @@ html, body{
 				top: 1em;
 				right: 1em;
 			}
-			li{ padding-top: 1em;}
+			li{ padding-top: 2em;}
 				a{
+					font-size: 1.5em;
 					padding: .5em;
 					color: #fff;
 				}
@@ -357,6 +358,8 @@ html, body{
 					align-items: center;
 					position: absolute;
 					right: 10%;
+					li{padding-top: 1em}
+					a{font-size: 1em;}
 				}
 			}
 		}

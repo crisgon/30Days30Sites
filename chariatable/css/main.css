@@ -143,8 +143,9 @@ html, body {
         top: 1em;
         right: 1em; }
       .main-header .navigator ul li {
-        padding-top: 1em; }
+        padding-top: 2em; }
       .main-header .navigator ul a {
+        font-size: 1.5em;
         padding: .5em;
         color: #fff; }
   .main-header h2 {
@@ -333,6 +334,10 @@ html, body {
     align-items: center;
     position: absolute;
     right: 10%; }
+    .main-header .navigator ul li {
+      padding-top: 1em; }
+    .main-header .navigator ul a {
+      font-size: 1em; }
 
   .main-footer .container .map {
     width: 70%; }
