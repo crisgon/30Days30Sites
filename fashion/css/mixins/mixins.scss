@@ -1,0 +1,24 @@
+@mixin center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin spaceAround {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+@mixin spaceBetween {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@mixin scale {
+	-webkit-transform: scale(1.02);
+	-moz-transform: scale(1.02);
+	-o-transform: scale(1.02);
+	transform: scale(1.02);
+}

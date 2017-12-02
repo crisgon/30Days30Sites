@@ -1,0 +1,429 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Barlow+Condensed:700i|Barlow+Semi+Condensed:300");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+img {
+  max-width: 100%; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+input {
+  padding: .5em;
+  border: 0; }
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  font-family: 'Barlow Semi Condensed', sans-serif; }
+
+.title {
+  width: 100%;
+  font-size: 2em;
+  padding: 1em 0; }
+
+.container {
+  width: 100%;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.header {
+  width: 100%;
+  height: 50px;
+  padding: 1em; }
+  .header .open-nav {
+    font-size: 1.5em; }
+  .header .header-logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 0 2em 0 0;
+    color: #000; }
+  .header .small-nav {
+    display: none; }
+
+.nav {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  background-color: #2b2b2b;
+  flex-direction: column;
+  transition: right .4s;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .nav .close {
+    position: absolute;
+    top: 5vh;
+    right: 10vw;
+    font-size: 1.2em;
+    color: #fff; }
+  .nav .nav-item {
+    font-size: 1.3em;
+    color: #fff;
+    position: relative; }
+    .nav .nav-item:after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #ecf0f1;
+      transition: width .4s; }
+    .nav .nav-item:hover:after {
+      width: 100%; }
+  .nav .search {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .nav .search .search-field,
+    .nav .search .search-submit {
+      border: 2px solid #ecf0f1; }
+    .nav .search .search-submit {
+      background-color: #ecf0f1; }
+      .nav .search .search-submit:hover {
+        cursor: pointer;
+        background-color: #000;
+        border-color: #000;
+        color: #ecf0f1; }
+
+.nav-active {
+  right: 0;
+  z-index: 999; }
+
+.sale-off {
+  width: 100%;
+  height: 400px;
+  background-image: url("../images/banner.jpg");
+  background-size: cover;
+  background-position: center top;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 4em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.list-banners {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: -2em 0 0 0; }
+
+.banner {
+  width: calc(100% - 20px);
+  height: 300px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(189, 195, 199, 0.5);
+  font-family: 'Barlow Condensed', sans-serif;
+  overflow: hidden;
+  margin: .5em auto;
+  position: relative;
+  transition: transform .3s; }
+  .banner .banner-image {
+    font-size: 2em;
+    max-width: 100%; }
+  .banner .banner-title {
+    position: absolute;
+    bottom: 35%;
+    left: .3em;
+    font-size: 2.8em;
+    color: #000;
+    text-shadow: 0 0 10px #fff; }
+  .banner .banner-price {
+    position: absolute;
+    bottom: 0;
+    left: .3em;
+    margin: .5em 0;
+    font-size: 3em;
+    padding: .2em;
+    background-color: #000;
+    color: #fff; }
+  .banner:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    transform: scale(1.02); }
+
+.banner-large .banner-image {
+  min-width: 400%;
+  margin-left: -100%; }
+
+.departaments {
+  width: 100%;
+  padding: .5em;
+  flex-direction: column;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .departaments .departament-item {
+    width: calc(100% - 20px);
+    height: 400px;
+    margin: .5em 0;
+    background-size: cover;
+    background-position: center;
+    position: relative; }
+    .departaments .departament-item:hover {
+      background-size: 200%;
+      cursor: pointer; }
+    .departaments .departament-item:hover:after {
+      content: attr(data-name);
+      font-size: 3em;
+      color: #fff;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      position: absolute;
+      top: 0;
+      left: 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+  .departaments .watch {
+    background-image: url("../images/products/watch.jpg"); }
+  .departaments .dress {
+    background-image: url("../images/products/dress.jpg"); }
+  .departaments .purses {
+    background-image: url("../images/products/purse.jpg"); }
+  .departaments .lingeries {
+    background-image: url("../images/products/lingerie.jpg"); }
+  .departaments .shorts {
+    background-image: url("../images/products/short.jpg"); }
+
+.about {
+  width: 100%;
+  padding: .5em;
+  margin: 0 auto;
+  font-size: 1.2em;
+  line-height: 1.6em; }
+
+.footer {
+  width: 100%;
+  background-color: #ecf0f1;
+  padding: .5em;
+  text-align: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .footer .footer-links {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    .footer .footer-links .title-links {
+      font-size: 2em;
+      font-weight: bold;
+      padding: .5em; }
+    .footer .footer-links .list-links .links-item {
+      font-size: 1.3em;
+      padding: .5em; }
+      .footer .footer-links .list-links .links-item:hover {
+        font-weight: bold; }
+  .footer .subscribe {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .footer .subscribe #email {
+      width: 80%;
+      padding: 1em;
+      margin: .5em 0; }
+    .footer .subscribe #submit {
+      padding: 1em; }
+      .footer .subscribe #submit:hover {
+        background-color: #000;
+        color: #ecf0f1;
+        cursor: pointer; }
+  .footer .footer-social {
+    font-size: 2em;
+    padding: .5em 0; }
+    .footer .footer-social .social-link {
+      color: #a0a0a0; }
+      .footer .footer-social .social-link .fa {
+        transition: transform .3s; }
+      .footer .footer-social .social-link:hover .fa {
+        transform: translateY(-20%); }
+
+/*--------------PAGE MEN AND WOMEN---------------*/
+.products {
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .products .product-item {
+    width: 100%;
+    margin: .5em 0;
+    background-color: #ecf0f1;
+    overflow: hidden; }
+    .products .product-item .product-image {
+      transition: transform .3s; }
+    .products .product-item:hover .product-image {
+      cursor: pointer;
+      transform: translateY(-10px); }
+    .products .product-item .price {
+      font-size: 1.5em;
+      font-weight: bold;
+      padding: .5em; }
+    .products .product-item .buy {
+      width: 100%;
+      border: 0;
+      background-color: #000;
+      border: 2px solid #000;
+      color: #fff;
+      padding: 1em; }
+      .products .product-item .buy:hover {
+        cursor: pointer;
+        background-color: transparent;
+        color: #000; }
+  .products .pagination {
+    width: 100%;
+    padding: 2em; }
+    .products .pagination .page {
+      padding: .5em; }
+      .products .pagination .page:hover {
+        background-color: #000;
+        color: #fff; }
+    .products .pagination .page-active {
+      background-color: #ecf0f1; }
+
+@media (min-width: 320px) {
+  .header {
+    margin: 0 0 1em 0; }
+    .header .header-logo {
+      font-size: 2em; } }
+@media (min-width: 768px) {
+  .header {
+    height: 150px; }
+    .header .header-logo {
+      font-size: 3em; }
+    .header .small-nav {
+      display: block;
+      position: absolute;
+      top: .5em;
+      right: 50px; }
+      .header .small-nav #small-item {
+        padding: .3em;
+        color: #34495e; }
+
+  .nav {
+    background-color: transparent;
+    border: 1px solid #ecf0f1;
+    border-left: 0;
+    border-right: 0;
+    position: relative;
+    left: 0;
+    top: 5vh;
+    flex-direction: row;
+    padding: 1em; }
+    .nav .nav-item {
+      color: #34495e; }
+    .nav .close {
+      display: none; }
+
+  .open-nav {
+    display: none; }
+
+  .list-banners {
+    flex-direction: row;
+    justify-content: space-around; }
+    .list-banners .banner {
+      width: 30%; }
+    .list-banners .banner-large {
+      width: calc(100% - 50px); }
+      .list-banners .banner-large .banner-image {
+        min-width: 100%;
+        margin-left: 0; }
+
+  .departaments {
+    width: calc(100% - 50px);
+    margin: 0 auto;
+    flex-direction: row; }
+    .departaments .departament-item {
+      width: 20%; }
+
+  .about {
+    width: calc(100% - 50px); }
+
+  .footer {
+    flex-direction: row; }
+    .footer .footer-links {
+      flex-direction: row; }
+      .footer .footer-links .title-links {
+        font-size: 1.4em; }
+      .footer .footer-links .list-links .links-item {
+        font-size: 1.1em; }
+
+  .products {
+    width: calc(100% - 50px);
+    margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .products .product-item {
+      width: 22%; } }
+
+/*# sourceMappingURL=main.css.map */
