@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Sunshiney');
+@import 'bases/reset';
+@import 'mixins/mixin';
+
+html,
+body {
+	background-color: #fefefe;
+	font-family: 'Roboto', sans-serif;
+}
+
+
+.title {
+	width: 100%;
+	font-family: 'Sunshiney', cursive;
+	font-size: 4em;
+	text-align: center;
+	color: #fff;
+}
+
+.title-dark {
+	color: #130101;
+}
+
+/*-----------------------Header and Nav-------------------------*/ 
+.header {
+	width: 100%;
+	max-width: 960px;
+	height: 350px;
+	margin: 0 auto;
+	background-image: url('../images/banner.jpg');
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+
+	&:after {
+		@include zigzag;
+	}
+}
+
+.nav {
+	display: flex;
+	flex-direction: column;
+	padding: 1em;
+	text-align: center;
+	.nav-link {
+		font-size: 1.3em;
+		color: #fff;
+		padding: .5em;
+
+		&:hover {
+			font-weight: bolder;
+		}
+	}
+}
+
+/*-----------------------History Section-------------------------*/ 
+
+.history {
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 1em;
+
+	.history-text {
+		font-size: 1.2em;
+		line-height: 2em;
+		padding: 1em;
+		text-align: justify;
+	}
+}
+
+/*-----------------------Recipe Section-------------------------*/ 
+
+.recipe {
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 2.5em;
+	background-color: #130101;
+	position: relative;
+	color: #fff;
+	line-height: 1.4em;
+
+	&:after {
+		@include zigzag;
+	}
+
+	.recipe-ingredients {
+		padding: 2em .5em;
+		list-style-type: circle;
+	}
+
+	.recipe-preparation {
+		text-align: justify;
+	}
+}
+
+/*-----------------------Nutritional Section-------------------------*/ 
+
+.nutritional {
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 2em 0;
+}
+
+.nutritional-table {
+  width: 100%;
+  margin: 1em 0;
+}
+
+.nutritional-table thead {
+	background-color: #130101;
+	color: #fff;	
+	tr {
+		th {
+			padding: 1em;
+			text-align: left;
+		}
+	}
+}
+
+.nutritional-table tbody {
+	tr {
+		td {
+			padding: 1em;
+		}
+	}
+
+	tr:nth-child(even) {
+		background-color: #ebedef;
+	}
+}
+
+/*-----------------------Footer Section-------------------------*/ 
+.footer{
+	padding: 1em;
+	text-align: center;
+}
+
+/*-----------------------Media Queries-------------------------*/ 
+
+@media(min-width: 768px) {
+	.nav {
+		flex-direction: row;
+	}
+}

@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto|Sunshiney");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+img {
+  max-width: 100%; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+input {
+  padding: .5em;
+  border: 0; }
+
+html,
+body {
+  background-color: #fefefe;
+  font-family: 'Roboto', sans-serif; }
+
+.title {
+  width: 100%;
+  font-family: 'Sunshiney', cursive;
+  font-size: 4em;
+  text-align: center;
+  color: #fff; }
+
+.title-dark {
+  color: #130101; }
+
+/*-----------------------Header and Nav-------------------------*/
+.header {
+  width: 100%;
+  max-width: 960px;
+  height: 350px;
+  margin: 0 auto;
+  background-image: url("../images/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative; }
+  .header:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    display: block;
+    background-image: linear-gradient(-45deg, transparent 33.66%, #fff 33.66%, #fff 66.66%, transparent 66.66%), linear-gradient(45deg, transparent 33.66%, #fff 33.66%, #fff 66.66%, transparent 66.66%);
+    background-size: 30px 90px; }
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  text-align: center; }
+  .nav .nav-link {
+    font-size: 1.3em;
+    color: #fff;
+    padding: .5em; }
+    .nav .nav-link:hover {
+      font-weight: bolder; }
+
+/*-----------------------History Section-------------------------*/
+.history {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1em; }
+  .history .history-text {
+    font-size: 1.2em;
+    line-height: 2em;
+    padding: 1em;
+    text-align: justify; }
+
+/*-----------------------Recipe Section-------------------------*/
+.recipe {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5em;
+  background-color: #130101;
+  position: relative;
+  color: #fff;
+  line-height: 1.4em; }
+  .recipe:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    display: block;
+    background-image: linear-gradient(-45deg, transparent 33.66%, #fff 33.66%, #fff 66.66%, transparent 66.66%), linear-gradient(45deg, transparent 33.66%, #fff 33.66%, #fff 66.66%, transparent 66.66%);
+    background-size: 30px 90px; }
+  .recipe .recipe-ingredients {
+    padding: 2em .5em;
+    list-style-type: circle; }
+  .recipe .recipe-preparation {
+    text-align: justify; }
+
+/*-----------------------Nutritional Section-------------------------*/
+.nutritional {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2em 0; }
+
+.nutritional-table {
+  width: 100%;
+  margin: 1em 0; }
+
+.nutritional-table thead {
+  background-color: #130101;
+  color: #fff; }
+  .nutritional-table thead tr th {
+    padding: 1em;
+    text-align: left; }
+
+.nutritional-table tbody tr td {
+  padding: 1em; }
+.nutritional-table tbody tr:nth-child(even) {
+  background-color: #ebedef; }
+
+/*-----------------------Footer Section-------------------------*/
+.footer {
+  padding: 1em;
+  text-align: center; }
+
+/*-----------------------Media Queries-------------------------*/
+@media (min-width: 768px) {
+  .nav {
+    flex-direction: row; } }
+
+/*# sourceMappingURL=main.css.map */
