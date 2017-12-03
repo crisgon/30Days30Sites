@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Cruise</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<header class="header">
+		<h1 class="logo">Cruise <i class="fa fa-anchor" aria-hidden="true"></i></h1>
+		<button class="open-nav" data-js="open-nav"><i class="fa fa-bars"></i></button>
+		<nav class="nav" data-js="nav">
+			<button class="close-nav" data-js="close-nav"><i class="fa fa-times"></i></button>
+			<a href="#plans" class="nav-items">Plans</a>	
+			<a href="#destination" class="nav-items">Destinations</a>	
+			<a href="#ships" class="nav-items">Ships</a>	
+			<a href="#contact" class="nav-items">Contact us</a>	
+		</nav>
+
+		<form action="" class="search">
+			<div class="field-box">
+				<label for="departure" class="field-name">Departure</label>
+				<input type="text" id="departure" placeholder="Califórnia, San Diego, EUA">
+			</div>
+			<div class="field-box">
+				<label for="dest" class="field-name">Destination</label>
+				<input type="text" id="dest" placeholder="Salvador, Bahia, Brasil">
+			</div>
+			<div class="field-box">
+				<label for="date" class="field-name">Date</label>
+				<input type="date" id="date">
+			</div>
+			<div class="field-box">
+				<label for="passengers" class="field-name">Passengers</label>
+				<input type="number" id="passengers" placeholder="2">
+			</div>
+			<input type="submit" value="Search" id="search-button">
+		</form>
+	</header>
+
+	<section class="plans" id="plans">
+		<h3 class="title">Travel Plans</h3>
+		<div class="plan-box">
+			<img src="images/party.svg" alt="Party Globe" class="plan-image">
+			<h4 class="plan-title">Pool Party</h4>
+			<ul class="plan-benefits">
+				<li><i class="fa fa-check" aria-hidden="true"></i>Lorem Ipsum</li>
+				<li><i class="fa fa-times" aria-hidden="true"></i>Lorem Ipsum</li>
+				<li><i class="fa fa-times" aria-hidden="true"></i>Lorem Ipsum</li>
+				<li><i class="fa fa-check" aria-hidden="true"></i>Lorem Ipsum</li>
+				<li><i class="fa fa-times" aria-hidden="true"></i>Lorem Ipsum</li>
+			</ul>
+			<h4 class="plan-price">R$ 99,99</h4>
+			<button class="plan-button">Get</button>
+		</div>
+
+		<div class="plan-box">
+			<img src="images/couple.svg" alt="Couple" class="plan-image">
+			<h4 class="plan-title">Couple Trip</h4>
+			<ul class="plan-benefits">
+				<li><i class="fa fa-check" aria-hidden="true"></i>Lorem Ipsum</li>
+				<li><i class="fa fa-check" aria-hidden="true"></i>Lorem Ipsum</li>
+				<li><i class="fa fa-check" aria-hidden="true"></i>Lorem Ipsum</li>
+				<li><i class="fa fa-times" aria-hidden="true"></i>Lorem Ipsum</li>
+				<li><i class="fa fa-times" aria-hidden="true"></i>Lorem Ipsum</li>
+			</ul>
+			<h4 class="plan-price">R$ 199,99</h4>
+			<button class="plan-button">Get</button>
+		</div>
+
+		<div class="plan-box">
+			<img src="images/family.svg" alt="Family" class="plan-image">
+			<h4 class="plan-title">Family Trip</h4>
+			<ul class="plan-benefits">
+				<li><i class="fa fa-check" aria-hidden="true"></i>Lorem Ipsum</li>
+				<li><i class="fa fa-check" aria-hidden="true"></i>Lorem Ipsum</li>
+				<li><i class="fa fa-check" aria-hidden="true"></i>Lorem Ipsum</li>
+				<li><i class="fa fa-check" aria-hidden="true"></i>Lorem Ipsum</li>
+				<li><i class="fa fa-times" aria-hidden="true"></i>Lorem Ipsum</li>
+			</ul>
+			<h4 class="plan-price">R$ 299,99</h4>
+			<button class="plan-button">Get</button>
+		</div>
+	</section>
+
+	<section class="destination" id="destination">
+		<h3 class="title title-light">Destinations</h3>
+		<div class="destination-box">
+			<div class="destination-photo">
+				<img src="images/salvador.jpg" alt="City of Salvador">
+			</div>
+			<p class="destination-info">
+				<em class="destination-name">Salvador</em>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, nobis, fuga? Ipsa debitis libero mollitia recusandae architecto eaque rerum quo, ducimus earum et id, corporis atque officia harum consequatur alias!
+			</p>
+		</div>
+
+		<div class="destination-box">
+			<div class="destination-photo">
+				<img src="images/hawaii.jpg" alt="Hawaii">
+			</div>
+			<p class="destination-info">
+				<em class="destination-name">Hawaii</em>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, nobis, fuga? Ipsa debitis libero mollitia recusandae architecto eaque rerum quo, ducimus earum et id, corporis atque officia harum consequatur alias!
+			</p>
+		</div>
+
+		<div class="destination-box">
+			<div class="destination-photo">
+				<img src="images/caribe.jpg" alt="Caribe">
+			</div>
+			<p class="destination-info">
+				<em class="destination-name">Caribe</em>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, nobis, fuga? Ipsa debitis libero mollitia recusandae architecto eaque rerum quo, ducimus earum et id, corporis atque officia harum consequatur alias!
+			</p>
+		</div>
+	</section>
+
+	<section class="ships" id="ships">
+		<h3 class="title">Our Ships</h3>
+		<div class="ship-photo">
+			<img src="images/ship-01.jpg" alt="Our Ships">
+		</div>
+		<div class="ship-photo">
+			<img src="images/ship-02.jpg" alt="Our Ships">
+		</div>
+		<div class="ship-photo">
+			<img src="images/ship-03.jpg" alt="Our Ships">
+		</div>
+		<div class="ship-photo">
+			<img src="images/ship-04.jpg" alt="Our Ships">
+		</div>
+		<div class="ship-photo">
+			<img src="images/ship-05.jpg" alt="Our Ships">
+		</div>
+		<div class="ship-photo">
+			<img src="images/ship-06.jpg" alt="Our Ships">
+		</div>
+	</section>
+
+	<section class="marketing">
+		<h2 class="marketing-text">Go to beautiful places without paying too much</h2>
+	</section>
+
+	<section class="contact" id="contact">
+		<h3 class="title title-light">Contact Us</h3>
+		<form action="" class="contact-form">
+			<input type="text" class="contact-field" placeholder="Your name">
+			<input type="email" class="contact-field" placeholder="your@email">
+			<textarea id="" cols="30" rows="10" class="contact-field contact-message" placeholder="Your Message"></textarea>
+			<input type="submit" class="contact-button">
+		</form>
+	</section>
+
+	<footer class="footer">
+		<p>
+				 Developed by <a href="https://crisgon.github.io" target="_blank"> Cristiano Gonçalves</a> with <i class="fa fa-code"></i> and <i class="fa fa-heart"></i>
+			</p>
+	</footer>
+	<script src="https://use.fontawesome.com/3a8d059f5c.js"></script>
+	<script src="js/nav.js"></script>
+</body>
+</html>
