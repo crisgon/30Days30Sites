@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css?family=Muli');
+@import 'bases/reset';
+
+html,
+body {
+	font-family: 'Muli', sans-serif;
+	color: #323230;
+}
+/*--------------------Base----------------------*/ 
+.title {
+	padding: 1em;
+	font-size: 2.4em;
+	color: #fff;
+}
+
+.title-dark {
+	color: #323230;
+	text-align: center;
+}
+
+.subtitle {
+	font-size: 1.8em;
+	padding: .5em 0;
+}
+
+.container {
+	width: 800px;
+	margin: 0 auto;
+	background-color: #f8f8f8;
+}
+
+/*--------------------Header Section----------------------*/ 
+
+.header {
+	background-color: #f0da50;
+	font-weight: bold;
+	position: relative;
+
+	.title {
+		position: absolute;
+		top: 0;
+	}
+}
+
+/*--------------------Most Viewed Section----------------------*/ 
+
+.most-viewed {
+	padding: 1em;
+
+	.article {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		margin: 0 0 2em 0;
+		background-color: #fff;
+		padding: 0 1em 2em 1em;
+
+		.article-resume {
+			padding: .5em;
+			position: relative;
+
+			.article-text {
+				text-align: justify;
+				line-height: 2em;
+			}
+
+			.article-read {
+				position: absolute;
+				right: .5em;
+				padding: 1em;
+				border: 0;
+				margin: .5em 0;
+				color: #fff;
+				background-color: #f0da50;
+				&:hover {
+					cursor: pointer;
+					box-shadow: 0 0 4px #dedede;
+				}
+			}
+		}
+	}
+
+	.article-left {
+		.article-read {
+			left: .5em;
+		}
+	}
+}
+
+/*--------------------Latest Articles Section----------------------*/ 
+
+.latest {
+	padding: 1em;
+
+	.latest-article {
+		padding: 1em;
+		margin: .5em 0;
+		background-color: #fff;
+
+		.latest-link {
+			font-size: 1.4em;
+			padding: .7em;
+			color: #f0da50;
+		}
+
+		.latest-image {
+			padding: .5em;
+		}
+
+		.latest-footer {
+			padding: 0 1em;
+			display: flex;
+			align-items: center;
+
+			img {
+				width: 30px;
+				border-radius: 50%;
+			}
+
+			a {
+				color: #f0da50;
+				padding: 0 .5em;
+			}
+		}
+	}
+}
+
+.latest-article,
+.article {
+	&:hover {
+		cursor: pointer;
+		box-shadow: 0 0 4px #dedede;
+	}
+}
+
+/*--------------------Main Footer Section and Credits Section----------------------*/ 
+
+.footer {
+	padding: 1em;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	font-size: 1.2em;
+
+	a {
+		color: #f0da50;
+	}
+
+	.social {
+		font-size: 1.5em;
+		padding: .5em;
+	}
+}
+
+.credits {
+	padding: 1em;
+	text-align: center;
+
+	a {
+		color: #f0da50;
+	}
+}

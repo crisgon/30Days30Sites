@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css?family=Muli");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+img {
+  max-width: 100%; }
+
+a {
+  text-decoration: none; }
+
+p {
+  line-height: 1.5em; }
+
+html,
+body {
+  font-family: 'Muli', sans-serif;
+  color: #323230; }
+
+/*--------------------Base----------------------*/
+.title {
+  padding: 1em;
+  font-size: 2.4em;
+  color: #fff; }
+
+.title-dark {
+  color: #323230;
+  text-align: center; }
+
+.subtitle {
+  font-size: 1.8em;
+  padding: .5em 0; }
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+  background-color: #f8f8f8; }
+
+/*--------------------Header Section----------------------*/
+.header {
+  background-color: #f0da50;
+  font-weight: bold;
+  position: relative; }
+  .header .title {
+    position: absolute;
+    top: 0; }
+
+/*--------------------Most Viewed Section----------------------*/
+.most-viewed {
+  padding: 1em; }
+  .most-viewed .article {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 0 2em 0;
+    background-color: #fff;
+    padding: 0 1em 2em 1em; }
+    .most-viewed .article .article-resume {
+      padding: .5em;
+      position: relative; }
+      .most-viewed .article .article-resume .article-text {
+        text-align: justify;
+        line-height: 2em; }
+      .most-viewed .article .article-resume .article-read {
+        position: absolute;
+        right: .5em;
+        padding: 1em;
+        border: 0;
+        margin: .5em 0;
+        color: #fff;
+        background-color: #f0da50; }
+        .most-viewed .article .article-resume .article-read:hover {
+          cursor: pointer;
+          box-shadow: 0 0 4px #dedede; }
+  .most-viewed .article-left .article-read {
+    left: .5em; }
+
+/*--------------------Latest Articles Section----------------------*/
+.latest {
+  padding: 1em; }
+  .latest .latest-article {
+    padding: 1em;
+    margin: .5em 0;
+    background-color: #fff; }
+    .latest .latest-article .latest-link {
+      font-size: 1.4em;
+      padding: .7em;
+      color: #f0da50; }
+    .latest .latest-article .latest-image {
+      padding: .5em; }
+    .latest .latest-article .latest-footer {
+      padding: 0 1em;
+      display: flex;
+      align-items: center; }
+      .latest .latest-article .latest-footer img {
+        width: 30px;
+        border-radius: 50%; }
+      .latest .latest-article .latest-footer a {
+        color: #f0da50;
+        padding: 0 .5em; }
+
+.latest-article:hover,
+.article:hover {
+  cursor: pointer;
+  box-shadow: 0 0 4px #dedede; }
+
+/*--------------------Main Footer Section and Credits Section----------------------*/
+.footer {
+  padding: 1em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2em; }
+  .footer a {
+    color: #f0da50; }
+  .footer .social {
+    font-size: 1.5em;
+    padding: .5em; }
+
+.credits {
+  padding: 1em;
+  text-align: center; }
+  .credits a {
+    color: #f0da50; }
+
+/*# sourceMappingURL=main.css.map */
