@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+img {
+  max-width: 100%; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+input {
+  padding: .5em;
+  border: 0; }
+
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #1d1f20; }
+
+.subtitle {
+  color: #fff;
+  font-size: 2em;
+  text-align: center;
+  padding: .5em; }
+  .subtitle a {
+    color: #2dbc81; }
+
+.header {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1em;
+  text-align: center; }
+  .header .header-title {
+    height: 150px;
+    font-size: 4em;
+    color: #fff;
+    background-image: -webkit-linear-gradient(90deg, #2ecc71, #2980b9);
+    background-image: -ms-linear-gradient(90deg, #2ecc71, #2980b9);
+    background-image: -o-linear-gradient(90deg, #2ecc71, #2980b9);
+    background-image: -moz-linear-gradient(90deg, #2ecc71, #2980b9);
+    background-image: linear-gradient(90deg, #2ecc71, #2980b9);
+    -webkit-background-clip: text;
+    -ms-background-clip: text;
+    -o-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    text-fill-color: transparent; }
+  .header .header-resume {
+    text-align: justify;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 1.5em; }
+
+.challenges {
+  width: 100%;
+  padding: 1em;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; }
+  .challenges .challenge-box {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    padding: 1em;
+    margin: .5em 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    background-image: -webkit-linear-gradient(90deg, #2ecc71, #2980b9);
+    background-image: -ms-linear-gradient(90deg, #2ecc71, #2980b9);
+    background-image: -o-linear-gradient(90deg, #2ecc71, #2980b9);
+    background-image: -moz-linear-gradient(90deg, #2ecc71, #2980b9);
+    background-image: linear-gradient(90deg, #2ecc71, #2980b9);
+    transition: transform .4s; }
+    .challenges .challenge-box .challenge-day {
+      text-transform: uppercase;
+      font-size: 2em;
+      padding: .5em; }
+    .challenges .challenge-box .challenge-title {
+      font-size: 2em;
+      padding: 0 0 .5em 0; }
+    .challenges .challenge-box .challenge-labels {
+      padding: .5em 0; }
+      .challenges .challenge-box .challenge-labels .label {
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 1em;
+        color: #fff;
+        padding: .5em; }
+    .challenges .challenge-box:hover {
+      transform: scale(1.03); }
+
+.credits {
+  padding: 1em;
+  font-size: 1.2em;
+  text-align: center;
+  color: #fff; }
+  .credits a {
+    color: #2dbc81; }
+
+@media (min-width: 768px) {
+  .challenges {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    .challenges a {
+      width: 48%; } }
+@media (min-width: 960px) {
+  .header {
+    width: 960px;
+    padding: 3em; }
+    .header .header-title {
+      font-size: 6em; }
+    .header .header-resume {
+      padding: 0; }
+
+  .challenges {
+    width: 960px; }
+    .challenges .challenge-box {
+      width: 450px; } }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import 'base/reset';
+@import 'mixins/mixins';
+
+html,
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #1d1f20;
+}
+
+.subtitle {
+	color: #fff;
+	font-size: 2em;
+	text-align: center;
+	padding: .5em;
+
+	a {
+		color: #2dbc81;
+	}
+}
+
+.header {
+	width: 100%;
+	margin: 0 auto;	
+	padding: 1em;
+	text-align: center;
+
+	.header-title {
+		height: 150px;
+		font-size: 4em;
+		color: #fff;
+		@include gradient;
+		-webkit-background-clip: text;
+		-ms-background-clip: text;
+		-o-background-clip: text;
+		-moz-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		-ms-text-fill-color: transparent;
+		-o-text-fill-color: transparent;
+		-moz-text-fill-color: transparent;
+		text-fill-color: transparent;
+	}
+
+	.header-resume {
+		text-align: justify;
+		color: #fff;
+		font-size: 1.2em;
+		line-height: 1.5em;
+	}
+}
+
+
+.challenges {
+	width: 100%;
+	padding: 1em;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	
+	.challenge-box {
+		width: 100%;
+		height: 200px;
+		text-align: center;
+		padding: 1em;
+		margin: .5em 0;
+		color: #fff;
+		display: flex;
+		flex-direction: column;
+		@include gradient;
+		transition: transform .4s;
+
+		.challenge-day {
+			text-transform: uppercase;
+			font-size: 2em;
+			padding: .5em;
+		}
+
+		.challenge-title {
+			font-size: 2em;
+			padding: 0 0 .5em 0;
+		}
+
+		.challenge-labels {
+			padding: .5em 0;
+			.label {
+				background-color: rgba(#fff, .5);
+				border-radius: 1em;	
+				color: #fff;
+				padding: .5em;
+			}
+		}
+		
+		&:hover {
+			transform: scale(1.03);
+		}
+	}
+}
+
+.credits {
+	padding: 1em;
+	font-size: 1.2em;
+	text-align: center;
+	color: #fff;
+
+	a {
+		color: #2dbc81;
+	}
+}
+
+@media(min-width: 768px) {
+	.challenges {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+
+		a {
+			width: 48%;
+		}
+	}
+}
+
+@media(min-width: 960px) {
+	.header {
+		width: 960px;
+		padding: 3em;
+		
+		.header-title {
+			font-size: 6em;
+		}
+
+		.header-resume {
+			padding: 0;
+		}
+	}
+
+	.challenges {
+		width: 960px;
+
+		.challenge-box {
+			width: 450px;
+		}
+	}	
+}
