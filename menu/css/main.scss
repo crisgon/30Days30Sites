@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes|Roboto');
+@import 'bases/reset';
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #de2b4b;
+	font-size: 3em;
+	color: #fff;
+}
+
+
+.header {
+	width: 80%;
+	margin: 0 auto;
+	padding: .5em;
+	display: flex;
+	justify-content: center;
+}
+
+.logo {
+	padding: 1em;
+}
+
+
+.wine-list {
+	padding: 1em;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+
+	.wine-box {
+		width: 100%;
+		margin: 0 0 1.5em 0;
+
+		.wine-header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+			background-color: #fff;
+			margin: .5em 0 0 0;
+
+			.wine-title {
+				font-family: 'Great Vibes', cursive;
+				color: #de2b4b;
+				font-size: 2em;
+				padding: .5em;
+			}
+
+			.flag {
+				padding: 0 .4em .125em 0;
+			}
+		}
+
+		.wine-description {
+			display: flex;
+			align-items: center;
+
+			.about {
+				padding: .5em;
+				text-align: justify;
+			}
+
+			.year {
+				font-size: 1.4em;
+				font-weight: bold;
+			}
+		}
+
+		.wine-price {
+			width: 100%;
+			border-bottom: 3px dashed #fff;
+			padding: 1em 0 0 0;
+		}
+	}
+}
+
+
+.footer {
+	text-align: center;
+	padding: .5em;
+
+	a {
+		color: #000000;
+
+		&:hover {
+			color: #fff;
+		}
+	}
+}
+
+
+
+	@media(min-width: 1024px) {
+		.wine-list {
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			.wine-box { 
+				width: 48%;
+			}
+		}
+	}
