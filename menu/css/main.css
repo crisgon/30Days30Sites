@@ -61,6 +61,7 @@ body {
   background-color: #de2b4b;
   color: #fff; }
 
+/*--------------------Header Section-------------------*/
 .header {
   width: 80%;
   margin: 0 auto;
@@ -70,12 +71,17 @@ body {
 
 .logo {
   padding: 1em; }
+  .logo img {
+    width: 50%;
+    margin: 0 25%; }
 
+/*--------------------List Wine Section-------------------*/
 .wine-list {
   padding: 1em;
   width: 100%;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  /*--------------------Wine Box Section-------------------*/ }
   .wine-list .wine-box {
     width: 100%;
     margin: 0 0 1.5em 0; }
@@ -89,14 +95,18 @@ body {
       .wine-list .wine-box .wine-header .wine-title {
         font-family: 'Great Vibes', cursive;
         color: #de2b4b;
-        font-size: 2em;
+        font-size: 2.5em;
         padding: .5em; }
       .wine-list .wine-box .wine-header .flag {
+        width: 15%;
         padding: 0 .4em .125em 0; }
     .wine-list .wine-box .wine-description {
       display: flex;
+      flex-direction: column;
       align-items: center;
       font-size: 1.5em; }
+      .wine-list .wine-box .wine-description img {
+        max-width: 25%; }
       .wine-list .wine-box .wine-description .about {
         padding: .5em;
         text-align: justify; }
@@ -108,6 +118,7 @@ body {
       border-bottom: 3px dashed #fff;
       padding: 1em 0 0 0; }
 
+/*--------------------Footer Section-------------------*/
 .footer {
   text-align: center;
   padding: .5em; }
@@ -116,12 +127,20 @@ body {
     .footer a:hover {
       color: #fff; }
 
+/*--------------------Media Queries-------------------*/
+@media (min-width: 768px) {
+  .wine-list .wine-box .wine-description {
+    flex-direction: row; }
+    .wine-list .wine-box .wine-description img {
+      max-width: 10%; } }
 @media (min-width: 1024px) {
   .wine-list {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between; }
     .wine-list .wine-box {
-      width: 48%; } }
+      width: 48%; }
+      .wine-list .wine-box .wine-description img {
+        width: 15%; } }
 
 /*# sourceMappingURL=main.css.map */

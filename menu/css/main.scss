@@ -7,7 +7,7 @@ body {
 	color: #fff;
 }
 
-
+/*--------------------Header Section-------------------*/
 .header {
 	width: 80%;
 	margin: 0 auto;
@@ -18,15 +18,21 @@ body {
 
 .logo {
 	padding: 1em;
+
+	img {
+		width: 50%;
+		margin: 0 25%;
+	}
 }
 
-
+/*--------------------List Wine Section-------------------*/
 .wine-list {
 	padding: 1em;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 
+/*--------------------Wine Box Section-------------------*/
 	.wine-box {
 		width: 100%;
 		margin: 0 0 1.5em 0;
@@ -42,19 +48,25 @@ body {
 			.wine-title {
 				font-family: 'Great Vibes', cursive;
 				color: #de2b4b;
-				font-size: 2em;
+				font-size: 2.5em;
 				padding: .5em;
 			}
 
 			.flag {
+				width: 15%;
 				padding: 0 .4em .125em 0;
 			}
 		}
 
 		.wine-description {
 			display: flex;
+			flex-direction: column;
 			align-items: center;
 			font-size: 1.5em;
+
+			img {
+				max-width: 25%;
+			}
 
 			.about {
 				padding: .5em;
@@ -75,7 +87,7 @@ body {
 	}
 }
 
-
+/*--------------------Footer Section-------------------*/
 .footer {
 	text-align: center;
 	padding: .5em;
@@ -89,16 +101,35 @@ body {
 	}
 }
 
+/*--------------------Media Queries-------------------*/
 
-
-	@media(min-width: 1024px) {
-		.wine-list {
-			flex-direction: row;
-			flex-wrap: wrap;
-			justify-content: space-between;
-
-			.wine-box { 
-				width: 48%;
+@media(min-width: 768px) {
+	.wine-list {
+		.wine-box {
+			.wine-description {
+				flex-direction: row;
+					img {
+						max-width: 10%;
+					}
 			}
 		}
 	}
+}
+
+@media(min-width: 1024px) {
+	.wine-list {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		.wine-box { 
+			width: 48%;
+
+			.wine-description {					
+				img {
+					width: 15%;
+				}
+			}
+		}
+	}
+}
