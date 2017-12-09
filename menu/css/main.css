@@ -95,7 +95,8 @@ body {
         padding: 0 .4em .125em 0; }
     .wine-list .wine-box .wine-description {
       display: flex;
-      align-items: center; }
+      align-items: center;
+      font-size: 1.5em; }
       .wine-list .wine-box .wine-description .about {
         padding: .5em;
         text-align: justify; }
