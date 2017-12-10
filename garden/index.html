@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/main.css">
+	<title>Garden</title>
+</head>
+<body>
+	<header class="header">
+		<h1 class="logo">
+			<img src="images/logo.svg" alt="Botanical Garden">
+		</h1>
+			<button class="open-nav" data-js="open-nav">
+				<i class="fa fa-bars" aria-label="Open Nav"></i>
+			</button>
+		<nav class="navigator" data-js="nav">
+			<button class="close-nav" data-js="close-nav">
+				<i class="fa fa-times" aria-label="Close Nav"></i>
+			</button>
+			<a href="index.html" class="navigator-link">Home</a>
+			<a href="#about" class="navigator-link">About</a>
+			<a href="#galery" class="navigator-link">Photos</a>
+			<a href="#contact" class="navigator-link">Contact</a>
+		</nav>
+	</header>
+
+
+	<div class="cycle-slideshow slide" 
+   data-cycle-fx="fadeout" 
+   data-cycle-timeout="8000"
+   data-cycle-slides="> div">
+    <div class="slide-item slide-1">
+    </div>
+    <div class="slide-item slide-2">
+    </div>
+    <div class="slide-item slide-3">
+    </div>
+	</div>
+
+
+<section class="about" id="about">
+	<h2 class="title">About</h2>
+	<p class="about-text">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt nam odio, maxime quo totam, repellat commodi doloribus ex aperiam aut rem nemo vel necessitatibus quis eaque tempora architecto explicabo mollitia! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt nam odio, maxime quo totam, repellat commodi doloribus ex aperiam aut rem nemo vel necessitatibus quis eaque tempora architecto explicabo mollitia!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt nam odio, maxime quo totam, repellat commodi doloribus ex aperiam aut rem nemo vel necessitatibus quis eaque tempora architecto explicabo mollitia!
+	</p>
+</section>
+<h2 class="title">Photos</h2>
+<section class="galery" id="galery">
+	<a href="#" class="galery-item">
+		<img src="images/galery-img-01.jpg" alt="Botanical Garden">
+	</a>
+
+	<a href="#" class="galery-item">
+		<img src="images/galery-img-02.jpg" alt="Botanical Garden">
+	</a>
+
+	<a href="#" class="galery-item">
+		<img src="images/galery-img-03.jpg" alt="Botanical Garden">
+	</a>
+
+	<a href="#" class="galery-item">
+		<img src="images/galery-img-01.jpg" alt="Botanical Garden">
+	</a>
+
+	<a href="#" class="galery-item">
+		<img src="images/galery-img-02.jpg" alt="Botanical Garden">
+	</a>
+
+	<a href="#" class="galery-item">
+		<img src="images/galery-img-03.jpg" alt="Botanical Garden">
+	</a>
+
+	<a href="#" class="galery-item">
+		<img src="images/galery-img-01.jpg" alt="Botanical Garden">
+	</a>
+
+	<a href="#" class="galery-item">
+		<img src="images/galery-img-02.jpg" alt="Botanical Garden">
+	</a>
+
+	<a href="#" class="galery-item">
+		<img src="images/galery-img-03.jpg" alt="Botanical Garden">
+	</a>
+
+	<a href="#" class="galery-item">
+		<img src="images/galery-img-01.jpg" alt="Botanical Garden">
+	</a>
+
+	<a href="#" class="galery-item">
+		<img src="images/galery-img-02.jpg" alt="Botanical Garden">
+	</a>
+
+	<a href="#" class="galery-item">
+		<img src="images/galery-img-03.jpg" alt="Botanical Garden">
+	</a>
+</section>
+
+<section class="contact" id="contact">
+	<h2 class="title">Contact</h2>
+
+	<form action="" class="form-contact">
+		<label for="name" class="field-label">Name:
+			<input type="text" id="name" class="field-input">
+		</label>
+		
+		<label for="email" class="field-label">E-mail:
+			<input type="email" id="email" class="field-input">
+		</label>
+		
+		<label for="message" class="field-label">Message:
+			<textarea name="message" cols="30" rows="10" class="field-input"></textarea>
+		</label>
+
+		<input type="submit" value="Send" class="send-contact">
+	</form>
+	<div class="map">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14411.543911689922!2d-49.2387704!3d-25.4420753!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1a2d5ec5fddc5654!2sJardim+Bot%C3%A2nico+de+Curitiba!5e0!3m2!1spt-BR!2sbr!4v1512944323695"  height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</div>
+</section>
+
+<footer class="credits">
+		Developed by <a href="https://crisgon.github.io" target="_blank">Cristiano Gonçalves</a>
+</footer>
+	<script src="https://use.fontawesome.com/3a8d059f5c.js"></script>
+	<script src="js/nav.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="http://malsup.github.com/jquery.cycle2.js"></script>
+</body>
+</html>
