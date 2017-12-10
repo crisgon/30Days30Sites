@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css?family=Passion+One|Roboto");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+img {
+  max-width: 100%;
+  cursor: pointer; }
+
+a {
+  text-decoration: none; }
+
+p {
+  line-height: 1.5em; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fefefe; }
+
+/*----------------------------Header Section------------------------------*/
+.header {
+  width: 100%;
+  background-color: #27ccb4;
+  border-bottom: 4px solid #5beee5;
+  color: #fff;
+  padding: .5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .header .logo {
+    font-family: 'Passion One', cursive;
+    font-size: 3em; }
+  .header .open-nav,
+  .header .close-nav {
+    background-color: transparent;
+    border: 0;
+    font-size: 2.5em;
+    color: #fff;
+    cursor: pointer; }
+  .header .close-nav {
+    width: 20%;
+    margin-top: .25em;
+    margin-left: 80%; }
+  .header .navigator {
+    width: 100vw;
+    height: 100vh;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 100vw;
+    display: flex;
+    flex-direction: column;
+    transition: left .4s; }
+    .header .navigator .navigator-link {
+      padding: .8em;
+      color: #fff;
+      font-size: 1.3em;
+      border-bottom: .2px solid #555; }
+      .header .navigator .navigator-link:hover, .header .navigator .navigator-link:active {
+        background-color: #555; }
+  .header .nav-active {
+    left: 0; }
+
+/*----------------------------Post Section------------------------------*/
+.post {
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /*----------------------------Comments Section------------------------------*/ }
+  .post .post-title {
+    font-size: 2.5em;
+    text-align: justify;
+    color: #333;
+    padding: .5em 0;
+    font-family: 'Passion One', cursive; }
+  .post .post-subtitle {
+    font-size: 2em;
+    padding: .5em 0;
+    width: 100%; }
+  .post .post-author {
+    font-size: 1.100em;
+    padding: 1em 0; }
+    .post .post-author a {
+      color: #27ccb4; }
+  .post .post-share {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; }
+    .post .post-share .post-share-button {
+      width: 100%;
+      padding: 1em;
+      margin: .250em 0;
+      text-align: center;
+      color: #fff; }
+      .post .post-share .post-share-button:hover {
+        color: rgba(0, 0, 0, 0.5); }
+    .post .post-share .facebook {
+      margin-top: 1em;
+      background-color: #3954a1; }
+    .post .post-share .twitter {
+      background-color: #2aa9e0;
+      margin-bottom: .5em; }
+  .post .post-text {
+    text-align: justify;
+    font-size: 1.1em;
+    line-height: 1.8em;
+    padding-bottom: 1em; }
+    .post .post-text .img-left,
+    .post .post-text .img-right {
+      display: inline-block;
+      padding: .5em; }
+    .post .post-text .img-left {
+      float: left; }
+    .post .post-text .img-right {
+      float: right; }
+  .post .comments {
+    padding: 1em 0;
+    border-top: 2px solid #ddd; }
+    .post .comments .comment-box {
+      background-color: #fafafa;
+      padding: .5em;
+      margin: 1em 0;
+      border-bottom: 2px solid #5beee5; }
+      .post .comments .comment-box .comment-author {
+        padding: .5em 0;
+        font-size: 1.2em;
+        font-weight: bold; }
+      .post .comments .comment-box .comment-text {
+        line-height: 1.8em;
+        text-align: justify; }
+
+/*----------------------------Sidebar Section------------------------------*/
+.sidebar {
+  width: 100%;
+  padding: 1em;
+  /*----------------------------Related Articles Section------------------------------*/ }
+  .sidebar .sidebar-title {
+    font-family: 'Passion One', cursive;
+    font-size: 2.4em;
+    color: #333;
+    padding: .5em 0; }
+  .sidebar .sidebar-search .search-field,
+  .sidebar .sidebar-search .search-button {
+    width: 100%;
+    padding: 1em .5em;
+    margin: .5em 0; }
+  .sidebar .sidebar-search .search-button {
+    border: 0;
+    background-color: #27ccb4;
+    color: #fff;
+    border-bottom: 4px solid #5beee5;
+    cursor: pointer; }
+  .sidebar .related-articles .single-related-articles {
+    display: flex;
+    align-items: flex-start;
+    margin: 1em 0; }
+    .sidebar .related-articles .single-related-articles img {
+      width: 30%;
+      padding-right: .25em; }
+    .sidebar .related-articles .single-related-articles .related-link {
+      font-size: 1.2em;
+      line-height: 1.5em;
+      color: #27ccb4; }
+      .sidebar .related-articles .single-related-articles .related-link:hover {
+        color: #333; }
+
+/*----------------------------Footer Section------------------------------*/
+.credits {
+  text-align: center;
+  padding: 1em;
+  background-color: #fafafa; }
+  .credits a {
+    color: #333;
+    text-decoration: underline; }
+
+/*----------------------------Media Queries------------------------------*/
+@media (min-width: 768px) {
+  .header .open-nav,
+  .header .close-nav {
+    display: none; }
+  .header .navigator {
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    position: relative;
+    left: 0;
+    flex-direction: row; }
+    .header .navigator .navigator-link {
+      border: 0; }
+      .header .navigator .navigator-link:hover {
+        background-color: transparent;
+        color: #0ba48c; }
+
+  .container {
+    padding: 1em;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: space-between; }
+    .container .post,
+    .container .sidebar {
+      background-color: #fff; }
+    .container .post {
+      width: 70%; }
+      .container .post .post-share {
+        justify-content: space-between;
+        align-items: center; }
+        .container .post .post-share .post-share-button {
+          width: 48%; }
+        .container .post .post-share .facebook,
+        .container .post .post-share .twitter {
+          margin: 1em 0; }
+    .container .sidebar {
+      width: 28%; } }
+
+/*# sourceMappingURL=main.css.map */

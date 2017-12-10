@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css?family=Passion+One|Roboto');
+@import 'bases/reset';
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #fefefe;
+}
+
+/*----------------------------Header Section------------------------------*/
+.header {
+	width: 100%;
+	background-color: #27ccb4;
+	border-bottom: 4px solid #5beee5;
+	color: #fff;
+	padding: .5em;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.logo {
+		font-family: 'Passion One', cursive;
+		font-size: 3em;	
+	}
+
+	.open-nav,
+	.close-nav {
+		background-color: transparent;
+		border: 0;
+		font-size: 2.5em;
+		color: #fff;
+		cursor: pointer;
+	}
+
+	.close-nav {
+		width: 20%;
+		margin-top: .25em;
+		margin-left: 80%;
+	}
+
+	.navigator {
+		width: 100vw;
+		height: 100vh;
+		background-color: #333;
+		position: fixed;
+		top: 0;
+		left: 100vw;
+		display: flex;
+		flex-direction: column;
+		transition: left .4s;
+
+		.navigator-link {
+			padding: .8em;
+			color: #fff;
+			font-size: 1.3em;
+			border-bottom: .2px solid #555;
+
+			&:hover,
+			&:active {
+				background-color: #555;
+			}
+		}
+	}
+	.nav-active {
+		left: 0;
+	}
+}
+
+
+/*----------------------------Post Section------------------------------*/
+.post {
+	width: 100%;
+	padding: 1em;
+	display: flex;
+	flex-direction:column;
+	flex-wrap: wrap;
+
+	.post-title {
+		font-size: 2.5em;
+		text-align: justify;
+		color: #333;
+		padding: .5em 0;
+		font-family: 'Passion One', cursive;
+	}
+
+	.post-subtitle {
+		font-size: 2em;
+		padding: .5em 0;
+		width: 100%;
+	}
+
+	.post-author {
+		font-size: 1.100em;
+		padding: 1em 0;
+
+		a {
+			color: #27ccb4;
+		}
+	}
+	
+	.post-share {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+
+		.post-share-button {
+			width: 100%;
+			padding: 1em;
+			margin: .250em 0;
+			text-align: center;
+			color: #fff;
+
+			&:hover {
+				color: rgba(#000, .5);
+			}
+		}
+
+		.facebook {
+			margin-top: 1em;
+			background-color: #3954a1;
+		}
+
+		.twitter {
+			background-color: #2aa9e0;
+			margin-bottom: .5em;
+		}
+	}
+
+	.post-text {
+		text-align: justify;
+		font-size: 1.1em;
+		line-height: 1.8em;
+		padding-bottom: 1em;
+
+		.img-left,
+		.img-right {
+			display: inline-block;
+			padding: .5em;
+		}
+
+		.img-left {
+			float: left;
+		}
+
+		.img-right {
+			float: right;
+		}	
+	}
+
+/*----------------------------Comments Section------------------------------*/
+	.comments {
+		padding: 1em 0;
+		border-top: 2px solid #ddd;
+
+		.comment-box {
+			background-color: #fafafa;
+			padding: .5em;
+			margin: 1em 0;
+			border-bottom: 2px solid #5beee5;
+
+			.comment-author {
+				padding: .5em 0;
+				font-size: 1.2em;
+				font-weight: bold;
+			}
+
+			.comment-text {
+				line-height: 1.8em;
+				text-align: justify;
+			}
+		}
+	}
+}
+
+/*----------------------------Sidebar Section------------------------------*/
+.sidebar {
+	width: 100%;
+	padding: 1em;
+
+	.sidebar-title {
+		font-family: 'Passion One', cursive;
+		font-size: 2.4em;
+		color: #333;
+		padding:  .5em 0;
+	}
+
+	.sidebar-search {
+		.search-field,
+		.search-button {
+			width: 100%;
+			padding: 1em .5em;
+			margin: .5em 0;
+		}
+
+		.search-button {
+			border: 0;
+			background-color: #27ccb4;
+			color: #fff;
+			border-bottom: 4px solid #5beee5;
+			cursor: pointer;
+		}
+	}
+
+/*----------------------------Related Articles Section------------------------------*/
+	.related-articles {
+		.single-related-articles {
+			display: flex;
+			align-items: flex-start;
+			margin: 1em 0;
+			
+			img {
+				width: 30%;
+				padding-right: .25em;
+			}
+
+			.related-link {
+				font-size: 1.2em;
+				line-height: 1.5em;
+				color: #27ccb4;
+
+				&:hover {
+					color: #333;
+				}
+			}
+		}
+	}	
+}
+
+/*----------------------------Footer Section------------------------------*/
+.credits {
+	text-align: center;
+	padding: 1em;
+	background-color: #fafafa;
+
+	a{
+		color: #333;
+		text-decoration: underline;
+	}
+}
+
+
+/*----------------------------Media Queries------------------------------*/
+@media(min-width: 768px) {
+	.header {
+		.open-nav,
+		.close-nav {
+			display: none;
+		}
+
+		.navigator {
+			width: auto;
+			height: auto;
+			background-color: transparent;
+			position: relative;
+			left: 0;
+			flex-direction: row;
+
+			.navigator-link {
+				border: 0;	
+
+				&:hover {
+					background-color: transparent;
+					color: #0ba48c;
+				}
+			}
+		}
+	}
+
+.container {
+	padding: 1em;
+	background-color: #fafafa;
+	display: flex;
+	justify-content: space-between;
+		
+		.post,
+		.sidebar {
+			background-color: #fff;
+		}	
+		.post {
+			width: 70%;
+
+			.post-share {
+				justify-content: space-between;
+				align-items: center;
+
+				.post-share-button {
+					width: 48%;
+				}
+
+				.facebook,
+				.twitter {
+					margin: 1em 0;
+				}
+			}
+		}
+
+		.sidebar {
+			width: 28%;
+		}
+	}
+}
+
+
+
