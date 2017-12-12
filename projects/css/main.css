@@ -52,7 +52,7 @@ img {
 
 a {
   text-decoration: none;
-  color: #000; }
+  color: #fff; }
 
 input {
   padding: .5em;
@@ -79,7 +79,7 @@ body {
   .header .header-title {
     height: 150px;
     font-size: 4em;
-    color: #fff;
+    color: #2dbc74;
     background-image: -webkit-linear-gradient(90deg, #2ecc71, #2980b9);
     background-image: -ms-linear-gradient(90deg, #2ecc71, #2980b9);
     background-image: -o-linear-gradient(90deg, #2ecc71, #2980b9);
@@ -100,6 +100,8 @@ body {
     color: #fff;
     font-size: 1.2em;
     line-height: 1.5em; }
+    .header .header-resume a {
+      color: #2dbc74; }
 
 .challenges {
   width: 100%;
@@ -110,6 +112,7 @@ body {
   .challenges .challenge-box {
     width: 100%;
     height: 200px;
+    border-radius: 10px;
     text-align: center;
     padding: 1em;
     margin: .5em 0;
@@ -164,8 +167,9 @@ body {
       padding: 0; }
 
   .challenges {
-    width: 960px; }
-    .challenges .challenge-box {
-      width: 450px; } }
+    width: 90%;
+    margin: 0 5%; }
+    .challenges a {
+      width: 32%; } }
 
 /*# sourceMappingURL=main.css.map */
