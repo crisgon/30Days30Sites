@@ -20,7 +20,7 @@ function open () {
 
 function close () {
 	nav.classList.remove('nav-active');
-	openNav.style.display = 'none';
+	openNav.style.display = 'block';
 	closeNav.style.display = 'none';
 }
 
