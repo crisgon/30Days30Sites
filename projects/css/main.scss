@@ -64,7 +64,7 @@ body {
 	
 	.challenge-box {
 		width: 100%;
-		height: 200px;
+		height: 250px;
 		border-radius: 10px;
 		text-align: center;
 		padding: 1em;
@@ -87,12 +87,16 @@ body {
 		}
 
 		.challenge-labels {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
 			padding: .5em 0;
 			.label {
 				background-color: rgba(#fff, .5);
 				border-radius: 1em;	
 				color: #fff;
 				padding: .5em;
+				margin: .2em;	
 			}
 		}
 		
