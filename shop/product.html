@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Toy Shop</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<main class="wrapper">
+	<!-- Header Section -->
+	<header class="header">
+		<nav class="navigation" data-js="nav">
+			<button class="open-nav" data-js="open-nav">
+				<i class="fa fa-bars" aria-label="Open Nav"></i>
+			</button>
+			<button class="close-nav" data-js="close-nav">
+				<i class="fa fa-times" aria-label="Close Nav"></i>
+			</button>
+			<a href="index.html">
+				<img src="images/logo.svg" alt="Logo Geek Store" class="logo">
+			</a>
+			<a href="single.html" class="navigation-link">Actions</a>
+			<a href="single.html" class="navigation-link">Shirts</a>
+			<a href="single.html" class="navigation-link">Cushions</a>
+			<a href="single.html" class="navigation-link">Mugs</a>
+			<a href="single.html" class="navigation-link">Contact</a>
+			<a href="single.html" class="cart">
+				<i class="fa fa-shopping-cart" aria-label="Cart"></i>
+			</a>
+		</nav>
+	</header>
+
+	<!--Single Product Section  -->
+	<section class="product-single">
+		<div class="product-single-image">
+			<img src="images/shirt.jpg" alt="">
+		</div>
+		<div class="product-single-info">
+			<p>Size</p>
+			<select name="size" class="product-select-field">
+				<option value="P">P</option>
+				<option value="M">M</option>
+				<option value="G">G</option>
+				<option value="XG">XG</option>
+			</select>
+			<p>Model</p>
+			<select name="model" class="product-select-field">
+				<option value="Male">Male</option>
+				<option value="Female">Female</option>
+			</select>
+			<label>
+				Quantify:
+				<input type="number" class="product-quantify" value="4">
+			</label>
+			<p class="product-single-price">R$ 99,99</p>
+			<label>
+				Shipping:
+				<i class="fa fa-truck" aria-hidden="true"></i>
+				<input type="text" class="product-single-shipping" placeholder="_____-___">
+			</label>
+			<button class="btn">Buy</button>
+
+			<div class="social">
+				<a href="#" class="social-link">
+					<i class="fa fa-facebook-official"></i>
+				</a>
+				<a href="#" class="social-link">
+					<i class="fa fa-twitter-square"></i>
+				</a>
+				<a href="#" class="social-link">
+					<i class="fa fa-google-plus-square"></i>
+				</a>
+				<a href="#" class="social-link">
+					<i class="fa fa-pinterest-square"></i>
+				</a>
+			</div>
+		</div>
+	</section>
+
+
+
+	<!-- Footer Section -->
+
+	<footer class="footer">
+		<div class="offer">
+			<h3 class="offer-title">Receive a discount of up to 50%</h3>
+				<input type="email" placeholder="@email" class="offer-field">
+			<button class="btn">Send</button>
+		</div>
+		<ul class="payments">
+			<li>Card</li>
+			<li>Boleto</li>
+			<li>Paypal</li>
+			<li>Bitcoins</li>
+		</ul>
+
+		<p class="credits">
+			Developed by <a href="https://crisgon.github.io" target="_blank">Cristiano Gonçalves</a>
+		</p>
+	</footer>
+	</main>
+
+	<script src="https://use.fontawesome.com/3a8d059f5c.js"></script>
+	<script src="js/nav.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.cycle2.js"></script>
+</body>
+</html>

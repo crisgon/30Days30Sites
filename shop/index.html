@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Toy Shop</title>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<main class="wrapper">
+	<!-- Header Section -->
+	<header class="header">
+		<nav class="navigation" data-js="nav">
+			<button class="open-nav" data-js="open-nav">
+				<i class="fa fa-bars" aria-label="Open Nav"></i>
+			</button>
+			<button class="close-nav" data-js="close-nav">
+				<i class="fa fa-times" aria-label="Close Nav"></i>
+			</button>
+			<a href="index.html">
+				<img src="images/logo.svg" alt="Logo Geek Store" class="logo">
+			</a>
+			<a href="single.html" class="navigation-link">Actions</a>
+			<a href="single.html" class="navigation-link">Shirts</a>
+			<a href="single.html" class="navigation-link">Cushions</a>
+			<a href="single.html" class="navigation-link">Mugs</a>
+			<a href="single.html" class="navigation-link">Contact</a>
+			<a href="single.html" class="cart">
+				<i class="fa fa-shopping-cart" aria-label="Cart"></i>
+			</a>
+		</nav>
+	</header>
+
+	<!-- Slider Section -->
+	<section class="slider cycle-slideshow"
+        data-cycle-fx=scrollHorz
+        data-cycle-timeout=8000
+        data-cycle-prev="#prev"
+        data-cycle-next="#next">
+        <img src="images/slide-1.gif">
+        <img src="images/slide-2.gif">
+        <img src="images/slide-3.gif">
+        <img src="images/slide-4.gif">
+        <span id=prev>
+        	<i class="fa fa-chevron-circle-left"></i> 
+        </span>
+        <span id=next>
+        	<i class="fa fa-chevron-circle-right"></i> 
+        </span>
+	</section>
+
+	<!-- Categories Section -->
+
+	<section class="categories">
+		<h2 class="title">Categories</h2>
+		<div class="categories-box">
+			<a href="single.html">Actions</a>
+		</div>
+		<div class="categories-box">
+			<a href="single.html">Shirts</a>
+		</div>
+		<div class="categories-box">
+			<a href="single.html">Cushions</a>
+		</div>
+		<div class="categories-box">
+			<a href="single.html">Mugs</a>
+		</div>
+	</section>
+
+	<!--  Products Section-->
+	<section class="products">
+		<h2 class="title title-light">Some products</h2>
+		<div class="product-box">
+			<span class="product-price">R$ 99,99</span>
+			<img src="images/shirt.jpg" alt="Shirt">
+			<a href="product.html" class="btn">Buy</a>
+		</div>
+
+		<div class="product-box">
+			<span class="product-price">R$ 99,99</span>
+			<img src="images/cushions.jpg" alt="Cushion">
+			<a href="product.html" class="btn">Buy</a>
+		</div>
+
+		<div class="product-box">
+			<span class="product-price">R$ 99,99</span>
+			<img src="images/mug.jpg" alt="Mug">
+			<a href="product.html" class="btn">Buy</a>
+		</div>
+
+		<div class="product-box">
+			<span class="product-price">R$ 99,99</span>
+			<img src="images/action.png" alt="Action Figure">
+			<a href="product.html" class="btn">Buy</a>
+		</div>
+
+		<a href="#" class="more">More Products</a>
+	</section>
+	<!-- Footer Section -->
+
+	<footer class="footer">
+		<div class="offer">
+			<h3 class="offer-title">Receive a discount of up to 50%</h3>
+				<input type="email" placeholder="@email" class="offer-field">
+			<button class="btn">Send</button>
+		</div>
+		<ul class="payments">
+			<li>Card</li>
+			<li>Boleto</li>
+			<li>Paypal</li>
+			<li>Bitcoins</li>
+		</ul>
+
+		<p class="credits">
+			Developed by <a href="https://crisgon.github.io" target="_blank">Cristiano Gonçalves</a>
+		</p>
+	</footer>
+	</main>
+
+	<script src="https://use.fontawesome.com/3a8d059f5c.js"></script>
+	<script src="js/nav.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.cycle2.js"></script>
+</body>
+</html>
