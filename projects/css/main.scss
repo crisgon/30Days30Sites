@@ -8,6 +8,21 @@ body {
 	background-color: #1d1f20;
 }
 
+/*Change Scroll Color*/ 
+::-webkit-scrollbar {
+	width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #fff;
+	border-radius: 10px;
+}
+
+::-moz-scrollbar {
+	width: 15px;
+}
+
+
 .subtitle {
 	color: #fff;
 	font-size: 2em;
