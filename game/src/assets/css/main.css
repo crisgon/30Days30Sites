@@ -59,11 +59,11 @@ input {
   border: 0; }
 
 body {
-  background-color: #000;
   font-family: 'Dosis', sans-serif;
   overflow-x: hidden; }
 
 .title {
+  width: 100%;
   color: #fff;
   padding: 1em;
   font-size: 2em;
@@ -81,6 +81,24 @@ body {
     top: .5em; }
   .title:before {
     bottom: .5em; }
+
+.title-blue {
+  color: #447fc3; }
+  .title-blue:after, .title-blue:before {
+    background-color: #447fc3; }
+
+.btn {
+  margin: 1em 0;
+  padding: 1.5em 2em;
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  transition: transform .2s;
+  border-radius: 10px;
+  box-shadow: 0 0 40px #447fc3, inset 0 0 40px #447fc3; }
+  .btn:hover, .btn:focus {
+    transform: scale(1.03); }
 
 .container {
   display: grid;
@@ -105,43 +123,57 @@ body {
   height: 100px;
   background-color: inherit;
   position: relative; }
-  .header .open-nav {
-    position: absolute;
+  .header .open-nav,
+  .header .close-nav {
     top: .5em;
     right: .5em;
-    z-index: 1;
     background-color: transparent;
     border: 0;
-    font-size: 1.5em;
+    font-size: 2em;
     color: #fff; }
+  .header .open-nav {
+    position: fixed;
+    z-index: 2; }
+  .header .close-nav {
+    position: absolute;
+    right: 1em;
+    z-index: 3; }
 
 .navigation {
   position: fixed;
-  left: -100vw;
+  right: -100vw;
   width: 100vw;
   height: 100vh;
   background-color: #000;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  z-index: 3;
+  transition: right .3s; }
   .navigation .navigation-link {
     font-size: 1.5em;
     text-shadow: 0 0 50px #fff;
     text-transform: uppercase;
     box-sizing: border-box;
     padding: 1em; }
-    .navigation .navigation-link:hover {
+    .navigation .navigation-link:hover, .navigation .navigation-link:focus {
       border-radius: 10px;
       box-shadow: 0 0 40px #447fc3, inset 0 0 40px #447fc3; }
 
+.show-nav {
+  right: 0; }
+
 .about {
   grid-column: 1fr;
-  background-color: #447fc3;
-  box-sizing: border-box;
-  padding: 1em; }
+  background-color: #000;
+  color: #fff; }
+  .about .about-text,
+  .about .about-image {
+    box-sizing: border-box;
+    padding: 1em; }
   .about .about-text {
-    font-size: 1.1em;
+    font-size: 1.3em;
     line-height: 2em;
     text-align: justify;
     text-indent: 50px; }
@@ -149,21 +181,151 @@ body {
       font-size: 3em;
       color: #fff;
       padding: 0 .2em 0 0; }
+  .about .about-image img {
+    margin: .5em 0; }
+
+.gallery {
+  grid-column: 1fr;
+  position: relative;
+  right: 0;
+  padding: 2em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000;
+  background-image: url("../images/coruscant.jpg");
+  background-size: cover;
+  background-attachment: fixed; }
+  .gallery:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); }
+  .gallery .btn,
+  .gallery .title {
+    z-index: 1; }
+
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 1; }
+  .gallery-list .gallery-image {
+    width: 100%;
+    height: 150px;
+    margin: .5em;
+    overflow: hidden;
+    position: relative; }
+    .gallery-list .gallery-image .gallery-image-caption {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.3em;
+      background-color: #fff;
+      color: #447fc3;
+      transform: translate(-100%);
+      transition: transform .5s; }
+    .gallery-list .gallery-image:hover, .gallery-list .gallery-image:focus {
+      cursor: pointer; }
+    .gallery-list .gallery-image:hover .gallery-image-caption,
+    .gallery-list .gallery-image:focus .gallery-image-caption {
+      transform: translate(0%);
+      cursor: pointer; }
+
+.gameplay {
+  width: 1fr;
+  padding: 2em 0;
+  background-color: #fff; }
+  .gameplay .gameplay-video {
+    width: 100%; }
+
+.purchase {
+  grid-column: 1fr;
+  padding: 2em 0;
+  padding: 1em;
+  text-align: center;
+  font-size: 2em;
+  color: #fff;
+  background-color: #447fc3;
+  background-image: url("../images/space.jpg");
+  background-size: cover; }
+  .purchase .purchase-covers {
+    margin: .5em 10%;
+    width: 80%; }
+  .purchase .purchase-promo {
+    width: 100%;
+    font-size: 2em;
+    padding: .5em 0; }
+
+.credits {
+  grid-column: 1fr;
+  font-size: 1.3em;
+  text-align: center;
+  padding: 1.5em;
+  position: relative; }
+  .credits p {
+    padding: .5em; }
+  .credits a {
+    color: #559be8; }
+  .credits .to-top .fa {
+    padding: 0 .2em; }
+
+@media (min-width: 500px) {
+  .purchase {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+  .purchase-covers {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around; }
+    .purchase-covers .purchase-image {
+      margin: 0;
+      width: 46%;
+      transition: transform .4s; }
+      .purchase-covers .purchase-image:hover, .purchase-covers .purchase-image:focus {
+        transform: translateY(-20px); }
+  .credits .to-top {
+    position: absolute;
+    bottom: 2em;
+    right: 1em; } }
 
 @media (min-width: 768px) {
   .banner .logo {
     width: auto; }
-
-  .open-nav {
+  .open-nav,
+  .close-nav {
     display: none; }
-
   .header .navigation {
     position: absolute;
     background-color: transparent;
-    left: 0;
+    right: 0;
     height: 100px;
     flex-direction: row; }
     .header .navigation .navigation-link {
-      padding: .5em 1em; } }
-
-/*# sourceMappingURL=main.css.map */
+      padding: .5em 1em; }
+  .about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    .about .about-text {
+      width: 48%; }
+    .about .about-image {
+      width: 50%; }
+  .gallery-list .gallery-image {
+    width: 300px; }
+  .gameplay .gameplay-video {
+    width: 80%;
+    margin: 0 10%;
+    height: 600px; }
+  .purchase .purchase-covers {
+    width: 70%; } }

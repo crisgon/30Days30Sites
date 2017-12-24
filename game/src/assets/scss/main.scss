@@ -3,12 +3,13 @@
 @import 'mixins/mixins';
 
 body {
-	background-color: #000;
 	font-family: 'Dosis', sans-serif;
 	overflow-x: hidden;
 }
 
+// Base  
 .title {
+	width: 100%;
 	color: #fff;
 	padding: 1em;
 	font-size: 2em;
@@ -35,12 +36,38 @@ body {
 	}
 }
 
+.title-blue {
+	color: #447fc3;
+
+	&:after,
+	&:before { 
+		background-color: #447fc3;
+	}
+}
+
+.btn {
+	margin: 1em 0;
+	padding: 1.5em 2em;
+	background-color: transparent;
+	border: 0;
+	color: #fff;
+	cursor: pointer;
+	transition: transform .2s;
+	@include shadowBlue;
+
+	&:hover,
+	&:focus {
+		transform: scale(1.03);
+	}
+}
+
 
 .container {
 	display: grid;
 	grid-template-columns: 1fr;
 }
 
+// Banner Area 
 .banner {
 	grid-column: 1fr;
 	height: 100vh;
@@ -55,27 +82,39 @@ body {
 	}
 }
 
+// Header & Nav Areas
+
 .header {
 	grid-column: 1fr;
 	height: 100px;
 	background-color: inherit;
 	position: relative;
 
-	.open-nav {
-		position: absolute;
+	.open-nav,
+	.close-nav {
 		top: .5em;
 		right: .5em;
-		z-index: 1;
 		background-color: transparent;
 		border: 0;
-		font-size: 1.5em;
+		font-size: 2em;
 		color: #fff;
+	}
+	
+	.open-nav {
+		position: fixed;
+		z-index: 2;
+	}
+
+	.close-nav {
+		position: absolute;
+		right: 1em;
+		z-index: 3;
 	}
 }
 
 .navigation {
 	position: fixed;
-	left: -100vw;
+	right: -100vw;
 	width: 100vw;
 	height: 100vh;
 	background-color: #000;
@@ -83,6 +122,8 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	z-index: 3;
+	transition: right .3s;
 
 	.navigation-link {
 		font-size: 1.5em;
@@ -91,20 +132,32 @@ body {
 		box-sizing: border-box;
 		padding: 1em;
 
-		&:hover {
-			border-radius: 10px;
-			box-shadow: 0 0 40px #447fc3, inset 0 0 40px #447fc3		}
+		&:hover,
+		&:focus {
+			@include shadowBlue;	
+		}
 	}
 }
 
+.show-nav {
+	right: 0;
+}
+
+// About Area 
+
 .about {
 	grid-column: 1fr;
-	background-color: #447fc3;
-	box-sizing: border-box;
-	padding: 1em;
+	background-color: #000;
+	color: #fff;
+
+	.about-text,
+	.about-image {
+		box-sizing: border-box;
+		padding: 1em;
+	}
 
 	.about-text {
-		font-size: 1.1em;
+		font-size: 1.3em;
 		line-height: 2em;
 		text-align: justify;
 		text-indent: 50px;
@@ -117,10 +170,178 @@ body {
 	}
 
 	.about-image {
-
+		img {
+			margin: .5em 0;
+		}
 	}
 }
 
+// Gallery Area
+.gallery {
+	grid-column: 1fr;
+	position: relative;
+	right: 0;
+	padding: 2em 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #000;
+	background-image: url('../images/coruscant.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0, .5);
+	}
+
+	.btn,
+	.title {
+		z-index: 1;
+	}
+}
+
+.gallery-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	z-index: 1;
+
+	.gallery-image {
+		width: 100%;
+		height: 150px;
+		margin: .5em;
+		overflow: hidden;
+		position: relative;
+
+		.gallery-image-caption {
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 1.3em;
+			background-color: #fff;
+			color: #447fc3;
+			transform: translate(-100%);
+			transition: transform .5s;
+		}
+		
+		&:hover,
+		&:focus {
+			cursor: pointer;
+		}
+
+		&:hover .gallery-image-caption,
+		&:focus .gallery-image-caption {
+			transform: translate(0%);			
+			cursor: pointer;		
+		}
+	}
+}
+
+// Gameplay Area
+.gameplay {
+	width: 1fr;
+	padding: 2em 0;
+	background-color: #fff;
+
+	.gameplay-video {
+		width: 100%;
+	}
+}
+
+// Purchase Area
+.purchase {
+	grid-column: 1fr;
+	padding: 2em 0;
+	padding: 1em;
+	text-align: center;
+	font-size: 2em;
+	color: #fff;
+	background-color: #447fc3;
+	background-image: url('../images/space.jpg');
+	background-size: cover;
+
+	.purchase-covers {
+		margin: .5em 10%;
+		width: 80%;
+	}
+
+	.purchase-promo {
+		width: 100%;
+		font-size: 2em;
+		padding: .5em 0;
+	}
+}
+
+// Footer Area
+.credits {
+	grid-column: 1fr;
+	font-size: 1.3em;
+	text-align: center;
+	padding: 1.5em;
+	position: relative;
+	
+	p {
+		padding: .5em;
+	}
+
+	a {
+		color: #559be8;
+	}
+
+	.to-top {
+
+		.fa {
+			padding: 0 .2em;
+		}
+	}
+}
+
+// Media Queries
+
+@media(min-width: 500px) {
+	.purchase {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.purchase-covers {
+		width: 50%;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-around;
+
+		.purchase-image {
+			margin: 0;
+			width: 46%;
+			transition: transform .4s;
+
+			&:hover,
+			&:focus {
+				transform: translateY(-20px);
+			}
+		}
+	}
+
+	.credits {
+
+		.to-top {
+			position: absolute;
+			bottom: 2em;
+			right: 1em;
+		}
+	}
+}
 
 @media(min-width: 768px) {
 
@@ -131,7 +352,8 @@ body {
 		}
 	}
 
-	.open-nav {
+	.open-nav ,
+	.close-nav {
 		display: none;
 	}
 
@@ -140,13 +362,50 @@ body {
 		.navigation {
 			position: absolute;
 			background-color: transparent;
-			left: 0;
+			right: 0;
 			height: 100px;
 			flex-direction: row;
 
 			.navigation-link {
 				padding: .5em 1em;
 			}
+		}
+	}
+
+	.about {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+
+		.about-text {
+			width: 48%;
+		}
+
+		.about-image {
+			width: 50%;
+		}
+	}
+
+	.gallery-list {
+
+		.gallery-image {
+			width: 300px;
+		}
+	}
+
+	.gameplay {
+
+		.gameplay-video {
+			width: 80%;
+			margin: 0 10%;
+			height: 600px;
+		}
+	}
+
+	.purchase {
+
+		.purchase-covers {
+			width: 70%;
 		}
 	}
 }

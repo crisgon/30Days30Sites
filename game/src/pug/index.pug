@@ -8,29 +8,87 @@ html
 	body
 		main.container
 			//- Banner Section		
-			section.banner
+			section.banner#banner
 				//- Header Section
 				header.header
 					//- Button Open Nav
-					button.open-nav
+					button.open-nav(data-js="open-nav")
 						i.fa.fa-bars
 					//- Nav Section
-					nav.navigation
-						a.navigation-link(href="#")= "Home"
-						a.navigation-link(href="#")= "About"
-						a.navigation-link(href="#")= "Gameplays"
-						a.navigation-link(href="#")= "Buy"
+					nav.navigation(data-js="nav")
+						button.close-nav(data-js="close-nav")
+							i.fa.fa-times
+						a.navigation-link(href="#about")= "About"
+						a.navigation-link(href="#gameplay")= "Gameplays"
+						a.navigation-link(href="#purchase")= "Buy"
 
 				//- Logo Banner
 				div.logo
 					img(src="assets/images/Logo_Star_Wars_Battlefront_II_.svg", alt="Logo Star Wars Battlefront II")
 
 			//- About Section
-			section.about
+			section.about#about
 				h1.title= "Star Wars Battlefront II"
 				p.about-text= "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam quisquam in excepturi numquam dignissimos veniam maxime culpa facere dolore ipsam recusandae, nemo voluptate ducimus, quam temporibus! Eveniet iure voluptates iste, accusamus dolores deleniti, corporis ullam unde tempora natus debitis soluta at in numquam delectus sequi eligendi quod odit rem assumenda exercitationem! Exercitationem numquam sunt porro laudantium deserunt soluta quibusdam, rerum a tenetur similique, itaque impedit. Aut dolores eveniet iure, quia molestiae error suscipit nesciunt temporibus explicabo iusto qui molestias accusamus laudantium voluptatibus magni similique nihil, nisi sunt repudiandae dolore accusantium delectus dolorum neque. Itaque cumque sapiente ea nulla quam sit nisi totam dolores deserunt accusantium voluptate laborum pariatur numquam harum cupiditate, natus, mollitia quaerat enim. Ut officiis incidunt, asperiores nesciunt aspernatur nisi vitae, nobis consequuntur ratione repellat dolore dignissimos doloribus cum quasi. Molestiae, voluptatem magni, quisquam quo sint dicta numquam sit in, provident esse nesciunt repellat possimus est doloribus obcaecati."
 				figure.about-image
-					img(src="assets/images/game.jpg", alt="Gamplay Star Wars Battlefront II")
-
+					img(src="assets/images/game-1.jpg", alt="Gamplay Star Wars Battlefront II")
+					img(src="assets/images/game-2.jpg", alt="Gamplay Star Wars Battlefront II")
+			//- Section Gallery		
+			section.gallery
+				h2.title= "Gallery"
+				ul.gallery-list
+					li.gallery-image
+						figure
+							figcaption.gallery-image-caption= "Lorem Ipsum"
+							img(src="assets/images/gameplay-1.jpg", alt="Lorem Ipsum")
+					li.gallery-image
+						figure
+							figcaption.gallery-image-caption= "Lorem Ipsum"
+							img(src="assets/images/gameplay-2.png", alt="Lorem Ipsum")
+					li.gallery-image
+						figure
+							figcaption.gallery-image-caption= "Lorem Ipsum"
+							img(src="assets/images/gameplay-3.jpg", alt="Lorem Ipsum")
+					li.gallery-image
+						figure
+							figcaption.gallery-image-caption= "Lorem Ipsum"
+							img(src="assets/images/gameplay-4.jpg", alt="Lorem Ipsum")
+					li.gallery-image
+						figure
+							figcaption.gallery-image-caption= "Lorem Ipsum"
+							img(src="assets/images/gameplay-1.jpg", alt="Lorem Ipsum")
+					li.gallery-image
+						figure
+							figcaption.gallery-image-caption= "Lorem Ipsum"
+							img(src="assets/images/gameplay-2.png", alt="Lorem Ipsum")
+					li.gallery-image
+						figure
+							figcaption.gallery-image-caption= "Lorem Ipsum"
+							img(src="assets/images/gameplay-3.jpg", alt="Lorem Ipsum")
+					li.gallery-image
+						figure
+							figcaption.gallery-image-caption= "Lorem Ipsum"
+							img(src="assets/images/gameplay-4.jpg", alt="Lorem Ipsum")
+				button.btn= "More Photos"
+			//- Gameplay Section									
+			section.gameplay#gameplay
+				h2.title.title-blue= "Gameplays"
+				iframe.gameplay-video(height="315" src="https://www.youtube.com/embed/_q51LZ2HpbE" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen)
+			//- Section Buy
+			section.purchase#purchase
+				h2.title= "Purchase"
+				div.purchase-covers
+					img.purchase-image(src="assets/images/game-cover-ps4.jpg", alt="PS4 Game")
+					img.purchase-image(src="assets/images/game-cover-xbox.jpg", alt="Xbox One Game")
+				p= " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, similique."
+				h3.purchase-promo= "50% Off"
+				button.btn= "Buy Now"
+			//- Section Credtis
+			footer.credits
+				p= "Developed By "
+					a(href="https://crisgon.github.io", target="_blank")= "Cristiano Gonçalves"
+				a.to-top(href="#banner")= "Back To Top"
+					i.fa.fa-arrow-circle-up
 	script(src="https://use.fontawesome.com/3a8d059f5c.js")
+	script(src="assets/js/nav.js")
 
