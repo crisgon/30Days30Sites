@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+@import 'bases/reset';
+@import 'mixins/mixins';
+
+body {
+	background-color: #000;
+	font-family: 'Dosis', sans-serif;
+	overflow-x: hidden;
+}
+
+.title {
+	color: #fff;
+	padding: 1em;
+	font-size: 2em;
+	text-align: center;
+	text-transform: uppercase;
+	position: relative;
+
+	&:after,
+	&:before {
+		content: '';
+		position: absolute;
+		left: calc(50% - 100px);
+		width: 200px;
+		height: 2px;
+		background-color: #fff;
+	}
+
+	&:after {
+		top: .5em;
+	}
+
+	&:before {
+		bottom: .5em;
+	}
+}
+
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+.banner {
+	grid-column: 1fr;
+	height: 100vh;
+	background-image: url('../images/game-3.jpg');
+	background-size: cover;
+	background-position: center;
+	position: relative;
+
+	.logo {
+		width: 90%;
+		@include centerer;
+	}
+}
+
+.header {
+	grid-column: 1fr;
+	height: 100px;
+	background-color: inherit;
+	position: relative;
+
+	.open-nav {
+		position: absolute;
+		top: .5em;
+		right: .5em;
+		z-index: 1;
+		background-color: transparent;
+		border: 0;
+		font-size: 1.5em;
+		color: #fff;
+	}
+}
+
+.navigation {
+	position: fixed;
+	left: -100vw;
+	width: 100vw;
+	height: 100vh;
+	background-color: #000;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.navigation-link {
+		font-size: 1.5em;
+		text-shadow: 0 0 50px #fff;
+		text-transform: uppercase;
+		box-sizing: border-box;
+		padding: 1em;
+
+		&:hover {
+			border-radius: 10px;
+			box-shadow: 0 0 40px #447fc3, inset 0 0 40px #447fc3		}
+	}
+}
+
+.about {
+	grid-column: 1fr;
+	background-color: #447fc3;
+	box-sizing: border-box;
+	padding: 1em;
+
+	.about-text {
+		font-size: 1.1em;
+		line-height: 2em;
+		text-align: justify;
+		text-indent: 50px;
+
+		&:first-letter {
+			font-size: 3em;
+			color: #fff;
+			padding: 0 .2em 0 0;
+		}
+	}
+
+	.about-image {
+
+	}
+}
+
+
+@media(min-width: 768px) {
+
+	.banner {
+		
+		.logo {
+			width: auto;
+		}
+	}
+
+	.open-nav {
+		display: none;
+	}
+
+	.header {
+
+		.navigation {
+			position: absolute;
+			background-color: transparent;
+			left: 0;
+			height: 100px;
+			flex-direction: row;
+
+			.navigation-link {
+				padding: .5em 1em;
+			}
+		}
+	}
+}

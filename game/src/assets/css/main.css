@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+img {
+  max-width: 100%; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+
+input {
+  padding: .5em;
+  border: 0; }
+
+body {
+  background-color: #000;
+  font-family: 'Dosis', sans-serif;
+  overflow-x: hidden; }
+
+.title {
+  color: #fff;
+  padding: 1em;
+  font-size: 2em;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative; }
+  .title:after, .title:before {
+    content: '';
+    position: absolute;
+    left: calc(50% - 100px);
+    width: 200px;
+    height: 2px;
+    background-color: #fff; }
+  .title:after {
+    top: .5em; }
+  .title:before {
+    bottom: .5em; }
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr; }
+
+.banner {
+  grid-column: 1fr;
+  height: 100vh;
+  background-image: url("../images/game-3.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative; }
+  .banner .logo {
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.header {
+  grid-column: 1fr;
+  height: 100px;
+  background-color: inherit;
+  position: relative; }
+  .header .open-nav {
+    position: absolute;
+    top: .5em;
+    right: .5em;
+    z-index: 1;
+    background-color: transparent;
+    border: 0;
+    font-size: 1.5em;
+    color: #fff; }
+
+.navigation {
+  position: fixed;
+  left: -100vw;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .navigation .navigation-link {
+    font-size: 1.5em;
+    text-shadow: 0 0 50px #fff;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    padding: 1em; }
+    .navigation .navigation-link:hover {
+      border-radius: 10px;
+      box-shadow: 0 0 40px #447fc3, inset 0 0 40px #447fc3; }
+
+.about {
+  grid-column: 1fr;
+  background-color: #447fc3;
+  box-sizing: border-box;
+  padding: 1em; }
+  .about .about-text {
+    font-size: 1.1em;
+    line-height: 2em;
+    text-align: justify;
+    text-indent: 50px; }
+    .about .about-text:first-letter {
+      font-size: 3em;
+      color: #fff;
+      padding: 0 .2em 0 0; }
+
+@media (min-width: 768px) {
+  .banner .logo {
+    width: auto; }
+
+  .open-nav {
+    display: none; }
+
+  .header .navigation {
+    position: absolute;
+    background-color: transparent;
+    left: 0;
+    height: 100px;
+    flex-direction: row; }
+    .header .navigation .navigation-link {
+      padding: .5em 1em; } }
+
+/*# sourceMappingURL=main.css.map */
