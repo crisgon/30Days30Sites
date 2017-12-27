@@ -1,0 +1,17 @@
+block config
+	header.header
+		
+		h1.logo
+			a(href="index.html")
+				img(src="images/logo.svg", alt="The Simpsons Logo")
+
+		button(data-js="open-nav").open-nav= "Nav"
+			i.fa.fa-bars
+		nav(data-js="nav").navigation
+			button(data-js="close-nav").close-nav= "Close"
+				i.fa.fa-times
+			a.navigation-link(href="index.html")="Home"				
+			a.navigation-link(href="index.html#about")="About"
+			a.navigation-link(href="index.html#news")="News"
+			a.navigation-link(href="index.html#videos")="Videos"
+			a.navigation-link(href="index.html#characters")="Characters" 

@@ -1,0 +1,78 @@
+extends templates/layout.pug
+
+block contentBlock
+	//About Section
+	section.about#about
+		h2.title= "About"
+		img(src="images/simpsons_family.png", alt="Simpsons Family")
+		p.about-text= "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur culpa ipsam cum, dolorum ducimus recusandae, porro nemo alias praesentium fugiat reprehenderit velit saepe laboriosam. Cumque, eius. Incidunt obcaecati nihil voluptas neque hic possimus rerum, fugiat tenetur dolore aperiam eius vel doloremque libero dolor sequi quod, inventore. Deserunt eos provident, officiis ea voluptatibus, fuga! Fuga molestiae iure perspiciatis mollitia ipsam eius vitae eligendi velit quo qui laborum, eos deleniti debitis esse? Veritatis alias, laboriosam, expedita doloribus accusantium cupiditate cumque dicta. Quod eius, iusto optio reiciendis vitae ea quibusdam repudiandae dolorum ratione quos sunt rem magni deserunt, molestiae doloribus voluptate, consectetur veritatis."
+	//News Section
+	section.news#news
+		h2.title= "News" 
+		div.news-box
+			h3.news-title= "Bart death"
+			img(src="images/dead_bart.jpg", alt="Dead Bart")
+			p.news-resume= "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, aut voluptate veritatis excepturi perferendis id, perspiciatis distinctio consequuntur nam dignissimos."
+			button.news-button= "Read More"
+
+		div.news-box
+			h3.news-title= "Bart death"
+			img(src="images/dead_bart.jpg", alt="Dead Bart")
+			p.news-resume= "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, aut voluptate veritatis excepturi perferendis id, perspiciatis distinctio consequuntur nam dignissimos."
+			button.news-button= "Read More"
+
+		div.news-box
+			h3.news-title= "Bart death"
+			img(src="images/dead_bart.jpg", alt="Dead Bart")
+			p.news-resume= "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, aut voluptate veritatis excepturi perferendis id, perspiciatis distinctio consequuntur nam dignissimos."
+			button.news-button= "Read More"
+
+		div.news-box
+			h3.news-title= "Bart death"
+			img(src="images/dead_bart.jpg", alt="Dead Bart")
+			p.news-resume= "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, aut voluptate veritatis excepturi perferendis id, perspiciatis distinctio consequuntur nam dignissimos."
+			button.news-button= "Read More"
+	
+	//Videos Section
+	section.videos#videos
+		h3.title= "Videos"
+		<iframe max-width="560" height="315" src="https://www.youtube.com/embed/SR8WWFzrZAg" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
+		<iframe max-width="560" height="315" src="https://www.youtube.com/embed/SR8WWFzrZAg" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
+		<iframe max-width="560" height="315" src="https://www.youtube.com/embed/SR8WWFzrZAg" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
+		<iframe max-width="560" height="315" src="https://www.youtube.com/embed/SR8WWFzrZAg" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
+		<iframe max-width="560" height="315" src="https://www.youtube.com/embed/SR8WWFzrZAg" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
+		<iframe max-width="560" height="315" src="https://www.youtube.com/embed/SR8WWFzrZAg" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+	
+	//Characters Section
+	section.characters#characters
+		h2.title= "Main Characters" 
+		
+		a(href="homer.html").person1
+			div.person
+				img(src="images/homer.png", alt="Homer")
+				h3.person-name= "Homer"
+		
+		a(href="marge.html")
+			div.person
+				img(src="images/marge.png", alt="Marge")
+				h3.person-name= "Marge"
+		
+		a(href="bart.html")
+			div.person
+				img(src="images/bart.png", alt="Bart")
+				h3.person-name= "Bart"
+
+		a(href="lisa.html")
+			div.person
+				img(src="images/lisa.png", alt="Lisa")
+				h3.person-name= "Lisa"
+		
+		a(href="maggie.html")
+			div.person
+				img(src="images/maggie.png", alt="Maggie")
+				h3.person-name= "Maggie"                              
