@@ -1,0 +1,86 @@
+html(lang="en")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width")
+		title= "Pegasus Web"
+		link(rel="stylesheet", href="./css/main.css")   
+	body
+		main.container
+			// Header Section
+			header.header
+				h1.logo
+					img(src="images/pegasus.svg", alt="Pegasus Web")
+			
+				nav.navigation
+					a(href="#about").navigation-link= "About"
+					a(href="#services").navigation-link= "Services"
+					a(href="#contact").navigation-link= "Contact"
+			
+			// About Section
+			section.about#about
+				h2.title= "We Are The Pegasus Web"
+				p.about-text= " Lorem ipsum dolor sit amet, consectetur adipisicing elit. In nam error omnis sit quam, reiciendis, dicta labore quaerat, laborum voluptates esse culpa, necessitatibus enim. Sit perferendis beatae, amet enim facilis deleniti quis id quo optio ipsum rerum repellat, eveniet neque quos obcaecati accusamus sed dicta nobis aliquam maxime quaerat facere vitae error dignissimos. Voluptas ut magni aliquid deleniti doloremque libero sit voluptatibus, tenetur dolores omnis. Nisi ad, perspiciatis! Minima labore laudantium corporis quaerat itaque, porro blanditiis? Commodi, explicabo, reiciendis. Voluptatum consequatur ex mollitia expedita vel natus necessitatibus veniam quae error hic accusamus, dignissimos dolorem labore ad sapiente delectus, consectetur ipsum?"
+
+			// Clients Section
+			section.clients
+				h2.title= "Our Clients"
+				div.clients-box
+					img(src="images/coca-cola.png", alt="Coca Cola")
+
+				div.clients-box
+					img(src="images/paris.png", alt="Paris Saint Germain")
+
+				div.clients-box
+					img(src="images/hp.png", alt="HP")
+
+				div.clients-box
+					img(src="images/adidas.png", alt="Adidas")
+
+			// Services Section
+			section.services#services
+				h2.title= "Our Services"
+				div.services-item
+					img(src="images/editor.svg", alt="Website")
+					h3.service-title= "Websites"
+					p.service-resume= "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non esse nobis libero natus, atque perferendis dolore laudantium fugiat, delectus ipsa."
+
+				div.services-item
+					img(src="images/shop.svg", alt="Online Shop")
+					h3.service-title= "Online Shop"
+					p.service-resume= "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non esse nobis libero natus, atque perferendis dolore laudantium fugiat, delectus ipsa."
+
+				div.services-item
+					img(src="images/email.svg", alt="E-mail")
+					h3.service-title= "E-mail Marketing"
+					p.service-resume= "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non esse nobis libero natus, atque perferendis dolore laudantium fugiat, delectus ipsa."
+				
+				button.service-button= "Request a service"
+
+			// Contact Section
+			section.contact#contact
+				h2.title= "Contact Us"
+				form(action="").contact-form
+					label(for="name")= "Name"
+						input(type="text", placeholder="Your name").form-field
+					label(for="email")= "E-mail"
+						input(type="email", placeholder="@email").form-field
+					label(for="message")= "Message"
+						textarea(name="", cols="30", rows="10", placeholder="Your message").form-field
+					button.form-button= "Send"
+			// Social Section
+			section.social
+				h2.title= "Follow Us"
+				a(href="#").social-icon.facebook-icon= "Facebook"
+					i.fa.fa-facebook-official
+				a(href="#").social-icon.twitter-icon= "Twitter"
+					i.fa.fa-twitter-square
+				a(href="#").social-icon.google-icon= "Google Plus"
+					i.fa.fa-google-plus-square
+			
+			// Credits Section
+			footer.credits
+				p= "Developed by "
+					a(href="#")= "Cristiano Gonçalves"
+
+		script(src="https://use.fontawesome.com/3a8d059f5c.js")
+
