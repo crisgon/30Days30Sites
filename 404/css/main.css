@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Bungee');
 body {
-	background-image: url('http://dotageeks.com/wp-content/uploads/2015/10/Pacman-Maze-Wallpaper-11.jpg');
+	background-image: url('../images/bg.jpg');
 	background-size: cover;
 	position: relative;
 	font-family: 'Bungee', cursive;
