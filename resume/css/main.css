@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body {
+	background-color: #2c3e50;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+/*Change Scroll Color*/ 
+::-webkit-scrollbar {
+	width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #ffff;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: #c0392b;
+}
+
+::-moz-scrollbar {
+	width: 15px;
+}
+
+.title {
+	font-size: 1.7em;
+	width: 100%;
+	padding: .5em;
+	color: #fff;
+}
+
+/*----------------Profile Box---------------*/
+.profile {
+	width: 90%;
+	background-color: #fff;
+	border-radius: 10px;
+	position: absolute;
+	top: 0%;
+	left: 50%;
+	transform: translate(-50%,0%);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+/*----------------Profile Image---------------*/
+.profile-picture {
+	width: 100%;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+/*----------------Profile Box About---------------*/
+.profile-about {
+	padding: .5em;
+}
+
+.profile-title {
+	padding: .5em 0 0 0;
+	font-size: 1.8em;
+}
+
+.profile-subtitle {
+	font-style: italic;
+	padding: .2em 0 .5em 0;
+}
+
+.profile-resume {
+	line-height: 1.5em;
+}
+
+/*----------------Profile Skills & Social---------------*/
+.profile-skills,
+.profile-social {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #e74c3c;
+	border-radius: 10px;
+	margin: .5em 0;
+}
+
+.profile-skills .skill,
+.profile-social .social {
+	padding: .5em;
+	margin: .5em;
+	border-radius: 10px;
+	color: #fff;
+	background-color: #c0392b;
+	min-width: 40px;
+	min-height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: transform .3s;
+}
+
+.profile-skills .skill:hover,
+.profile-social .social:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
+/*----------------Media Queries---------------*/
+@media(min-width: 768px) {
+	.profile {
+		top: 50%;
+		transform: translate(-50%, -50%);
+		flex-direction: row;
+	}
+
+	.profile-title {
+		font-size: 2.5em;
+	}
+
+	.profile-about {
+		padding: 0 1em;
+	}
+
+	.profile-resume {
+		font-size: 1.3em;
+		line-height: 2em;
+	}
+}
+
+
+@media(min-width: 1324px) {
+	.profile {
+		height: 480px
+	}
+
+	.profile-picture {
+		align-items: center;
+		justify-content: flex-start;
+	}
+}
