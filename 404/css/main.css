@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee');
+body {
+	background-image: url('http://dotageeks.com/wp-content/uploads/2015/10/Pacman-Maze-Wallpaper-11.jpg');
+	background-size: cover;
+	position: relative;
+	font-family: 'Bungee', cursive;
+	color: #fff;
+	overflow: hidden;
+}
+
+body:after {
+	content: '';
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0,0,0,.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.content {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.title,
+.subtitle {
+	text-align: center;
+}
+
+.title {
+	font-size: 9em;
+	color: #faf01c;
+	text-shadow: 0 0 15px #e4c882;
+}
+
+.subtitle {
+	font-size: 3em;
+	color: #00fcff;
+}
+
+.text {
+	text-align: center;
+	padding: 1em;
+	font-size: 1.3em;
+	line-height: 1.4em;	
+	color: #ffa1cd;
+}
+
+.btn {
+	padding: 1em 2em;
+	background-color: #ff3100;
+	color: #fff;
+	border: 0;
+	border-radius: 10px;
+	text-transform: uppercase;
+	font-family: 'Bungee', cursive;	
+	transition: box-shadow .4s;
+}
+
+.btn:hover {
+	cursor: pointer;
+	box-shadow: 0 0 15px #fff;
+}
